@@ -6,23 +6,29 @@ const cors = require('cors');
 const mysqlConnection = require('./server/db-conn');
  
 const employeeRouter = require('./server/routes/employee');
+const userRouter = require('./server/routes/user');
 
 
 
 mysqlConnection.connect();
 
 app.use(cors());
-app.use('/api/employees', employeeRouter);
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/json' }));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(express.static(path.join(__dirname, 'dist/mean-client')));
+
+app.use('/api/employees', employeeRouter);
+app.use('/api/user', userRouter);
+
+
+
+app.use(express.static(path.join(__dirname, 'dist/ashrama-quiz')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/mean-client/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/ashrama-quiz/index.html'));
   }); 
 
 
