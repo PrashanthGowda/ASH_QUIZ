@@ -1,0 +1,8 @@
+
+	get-random-questions-------------------
+		SELECT r.* FROM ASHRAMA_QUIZ.QUESTIONS r
+		WHERE (
+		  SELECT COUNT(*) FROM ASHRAMA_QUIZ.QUESTIONS r1
+		  WHERE r.category_id = r1.category_id AND r.question_id < r1.question_id
+		) <= 1
+		ORDER BY r.category_id ASC, RAND()

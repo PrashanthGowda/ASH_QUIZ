@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   title = 'app';
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   }
 
   getEmployee() {
-      this.http.get('http://localhost:3625/api/employees').subscribe(
+      this.http.get('http://localhost:3625/api/questions').subscribe(
         res => {
           this.employee = res['data'];
         }

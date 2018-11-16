@@ -7,6 +7,7 @@ const mysqlConnection = require('./server/db-conn');
  
 const employeeRouter = require('./server/routes/employee');
 const userRouter = require('./server/routes/user');
+const questionsRouter = require('./server/routes/questions');
 
 
 
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({
 
 app.use('/api/employees', employeeRouter);
 app.use('/api/user', userRouter);
+app.use('/api/questions', questionsRouter);
 
 
 
