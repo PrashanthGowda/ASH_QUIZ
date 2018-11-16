@@ -1,0 +1,12 @@
+@import '~@angular/material/_theming';
+
+$custom-typography: mat-typography-config(
+    $font-family: 'Varela Round'
+);
+@include mat-core($custom-typography);
+
+$my-app-primary: mat-palette($mat-blue-grey, 900);
+$my-app-accent:  mat-palette($mat-amber, A200, A100, A400);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);

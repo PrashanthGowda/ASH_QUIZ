@@ -1,11 +1,2 @@
-<h1>Emp details</h1>
-<div *ngIf="employee">
-
-  <ul  *ngFor="let emp of employee">
-    <li>{{emp.employee_id}}</li>
-    <li>{{emp.employee_name}}</li>
-    <li>{{emp.designation}}</li>
-  </ul>
-</div>
-
-<button (click)="getEmployee()">empppp </button>
+<app-header></app-header>
+<router-outlet></router-outlet>
