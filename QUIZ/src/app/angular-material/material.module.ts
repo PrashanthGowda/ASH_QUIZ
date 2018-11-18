@@ -11,11 +11,39 @@ import {
   MatTabsModule,
   MatListModule,
   MatChipsModule,
-  MatRadioModule
+  MatRadioModule,
+  MatSnackBarModule
 } from '@angular/material';
 
 @NgModule({
-  imports: [MatButtonModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatGridListModule, MatCardModule, MatTabsModule, MatListModule, MatFormFieldModule, MatChipsModule, MatRadioModule ],
-  exports: [MatButtonModule, MatIconModule, MatToolbarModule, MatFormFieldModule, MatInputModule, MatGridListModule, MatCardModule, MatTabsModule, MatListModule, MatFormFieldModule, MatChipsModule, MatRadioModule ],
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule,
+    MatCardModule,
+    MatTabsModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatChipsModule,
+    MatRadioModule,
+    MatSnackBarModule],
+  exports: [
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule,
+    MatCardModule,
+    MatTabsModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatChipsModule,
+    MatRadioModule,
+    MatSnackBarModule
+  ],
 })
 export class MaterialModule { }

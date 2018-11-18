@@ -11,26 +11,39 @@
             <div class="row">
               <div class="col-12">
                   <mat-form-field class="full-width">
-                      <input matInput placeholder="Your full name..." formControlName="user_name">
-                    </mat-form-field>                  
+                      <input matInput placeholder="Your full name..." formControlName="user_name" required>
+                      <mat-error *ngIf="userRegistrationForm.get('user_name').hasError('required')">
+                        Full Name is <strong>required</strong>
+                      </mat-error>
+                    </mat-form-field>    
+
               </div>
               <div class="col-3">
                   <mat-form-field class="full-width">
-                      <input matInput placeholder="Age..."  formControlName="user_age">
+                      <input matInput placeholder="Age..."  formControlName="user_age"  required>
+                      <mat-error *ngIf="userRegistrationForm.get('user_age').hasError('required')">
+                        Age <strong>required</strong>
+                      </mat-error>
                     </mat-form-field> 
               </div>
               <div class="col-9">
                 <br>
-                  <mat-radio-group  formControlName="user_gender">
-                    Gender: &nbsp;&nbsp;&nbsp;&nbsp;
+                  <mat-radio-group  formControlName="user_gender"  required>
+                    Gender<sup>*</sup>: &nbsp;&nbsp;&nbsp;&nbsp;
                       <mat-radio-button value="male">Male</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
                       <mat-radio-button value="female">Female</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
                       <mat-radio-button value="others">Others</mat-radio-button>
+                      <mat-error *ngIf="userRegistrationForm.get('user_gender').hasError('required') && (userRegistrationForm.get('user_gender').dirty || userRegistrationForm.get('user_gender').touched)">
+                       Gender is <strong>required</strong>
+                      </mat-error>
                     </mat-radio-group>
               </div>
               <div class="col-12"  >
                   <mat-form-field class="full-width">
-                      <input matInput placeholder="phone number..." type="tel" formControlName="user_mobile">
+                      <input matInput placeholder="phone number..." type="tel" formControlName="user_mobile"  required>
+                      <mat-error *ngIf="userRegistrationForm.get('user_mobile').hasError('required')">
+                        phone number <strong>required</strong>
+                      </mat-error>
                     </mat-form-field>
               </div>
               <div class="col-12"  >
@@ -43,7 +56,7 @@
           <br>
           <div class="container">
             <div class="row">
-                <button mat-raised-button type=submit color='primary' style="float: right">Save & Continue</button>
+                <button mat-raised-button type=submit color='primary' style="float: right" [disabled]="userRegistrationForm.invalid">Save & Continue</button>
             </div>
             <br>
           </div>
