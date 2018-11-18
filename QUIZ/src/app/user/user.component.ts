@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from './user.service';
 import { MatSnackBar } from '@angular/material';
+import { SharedService } from '../shared/shared.service';
 
 @Component({
   selector: 'app-user',
@@ -17,7 +18,8 @@ export class UserComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private user: UserService,
-    private snackbar: MatSnackBar
+    private snackbar: MatSnackBar,
+    private shared: SharedService
   ) { }
 
   ngOnInit() {
@@ -36,9 +38,11 @@ export class UserComponent implements OnInit {
     this.user.createUser(form.value)
     .subscribe(
       res => {
+        debugger;
         this.snackbar.open(res.success, '', {
           duration: 3000
         });
+        this.shared.user_id = res.user_id;
         this.router.navigate(['rules']);
       },
       err => {

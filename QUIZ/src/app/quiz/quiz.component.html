@@ -5,20 +5,27 @@
 </div>
 <div class="container">
   <div class="row">
-    <mat-card class="mat-elevation-z12"> 
-      <h3>Queston 1:</h3>
-      <p>Which country has the honour of been the first in the Parade of Nations during opening ceremony of Olympics?</p>
-      <br>
-      <mat-radio-group class="radio-group">
-          <mat-radio-button class="radio-button" value="0">Host Country</mat-radio-button>
-          <mat-radio-button class="radio-button" value="1">Greece</mat-radio-button>
-          <mat-radio-button class="radio-button" value="2">Country who has maximum golds in pervious year</mat-radio-button>
-          <mat-radio-button class="radio-button" value="3">Countries come out in alphabetical order</mat-radio-button>
-      </mat-radio-group>
-      <br>
-      <div class="row">
-          <button mat-raised-button type=submit color='primary' style="float: right">Sumit & Next</button>
+    <mat-card class="mat-elevation-z12">
+      <form [formGroup]="questionsForm">
+      <div *ngIf="questions.length">
+        <h3>Question {{ questionIndex + 1 }}:</h3>
+        <p>{{ questions[questionIndex].question}}</p>
+        <br>
+        <div *ngIf="jsonparse(questions[questionIndex].question_options); let data">
+          <mat-radio-group class="radio-group" formControlName="option" (change)="radioChange($event)">
+            <mat-radio-button class="radio-button" value="0">{{data[0]}}</mat-radio-button>
+            <mat-radio-button class="radio-button" value="1">{{data[1]}}</mat-radio-button>
+            <mat-radio-button class="radio-button" value="2">{{data[2]}}</mat-radio-button>
+            <mat-radio-button class="radio-button" value="3">{{data[3]}}</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br>
+        <div class="row">
+          <button *ngIf="questionIndex !== questions.length - 1" mat-raised-button type=submit color='primary' style="float: right" [disabled]="notvalid" (click)="submitAndNext(questionsForm, questions[questionIndex])">Submit & Next</button>
+          <button *ngIf="questionIndex === questions.length - 1" mat-raised-button type=button color='primary' style="float: right" [disabled]="notvalid" (click)="finishQuiz(questionsForm, questions[questionIndex])">Finish Quiz</button>
+        </div>
       </div>
+    </form>
     </mat-card>
   </div>
 </div>

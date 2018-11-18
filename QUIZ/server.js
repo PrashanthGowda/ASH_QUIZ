@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const morgan  = require('morgan')
 const mysqlConnection = require('./server/db-conn');
  
 const employeeRouter = require('./server/routes/employee');
@@ -19,7 +20,7 @@ app.use(bodyParser.json({ type: 'application/json' }));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
+app.use(morgan('combined'));
 
 app.use('/api/employees', employeeRouter);
 app.use('/api/user', userRouter);

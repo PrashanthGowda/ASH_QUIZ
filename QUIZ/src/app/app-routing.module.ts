@@ -4,12 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { RulesComponent } from './rules/rules.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { ResultsComponent } from './results/results.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'user_registration', pathMatch: 'full'},
   { path: 'user_registration', component: UserComponent },
   { path: 'rules', component: RulesComponent },
-  { path: 'quiz', component: QuizComponent }
+  { path: 'quiz', component: QuizComponent },
+  { path: 'results', component: ResultsComponent }
 ];
 
 @NgModule({

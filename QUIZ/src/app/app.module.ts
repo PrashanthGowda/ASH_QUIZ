@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RulesComponent } from './rules/rules.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { CommonModule } from '@angular/common';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { QuizComponent } from './quiz/quiz.component';
     UserComponent,
     HeaderComponent,
     RulesComponent,
-    QuizComponent
+    QuizComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     HttpClientModule,
     MaterialModule,
     BrowserAnimationsModule,

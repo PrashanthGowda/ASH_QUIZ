@@ -20,7 +20,7 @@ exports.get_random_questions = function (req, res) {
 		  SELECT COUNT(*) FROM ASHRAMA_QUIZ.QUESTIONS r1
 		  WHERE r.category_id = r1.category_id AND r.question_id < r1.question_id
 		) <= 2
-		ORDER BY r.category_id ASC, RAND()
+		ORDER BY r.category_id ASC, RAND() limit 5
     `
     mysqlConnection.query(sql, function (error, response) {
         if (error) {
@@ -28,7 +28,7 @@ exports.get_random_questions = function (req, res) {
                 message: error
              });
         } else {
-            return res.send({ data: response });
+            return res.status(200).send({ randomQuestions: response });
         }
     });
 }

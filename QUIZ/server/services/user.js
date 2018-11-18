@@ -1,22 +1,6 @@
 const mysqlConnection = require('../db-conn');
 
-/* exports.create_user = function (req, res) {
-    console.log(req.body.user_name);
-    let sql = 'INSERT INTO USERS (`user_name`, `user_age`, `user_gender`, `user_email`, `user_mobile`, `user_created_at`) VALUES (?)'
-    let value = [
-        req.body.user_name,
-        req.body.user_age,
-        req.body.user_gender,
-        req.body.user_email,
-        req.body.user_mobile,
-        new Date()
-    ]
-    mysqlConnection.query(sql, [value], function (err, result) {
-        if (err) throw err;
-        console.log('1 record inserted', result);
-    });   
-} */
-
+const voucher_codes = require('voucher-code-generator');
 
 
 exports.create_user = function (req, res) {
@@ -31,9 +15,8 @@ exports.create_user = function (req, res) {
     mysqlConnection.query('INSERT INTO users SET ?', user, function (error, results, fields) {
         if (error) {
             let errorMessage = '';
-            console.log('error ocurred', error);
 
-            if(error.code === 'ER_DUP_ENTRY') {
+            if (error.code === 'ER_DUP_ENTRY') {
                 errorMessage = 'User Already Exsist';
             }
             res.status(500).send({
@@ -41,7 +24,6 @@ exports.create_user = function (req, res) {
                 'message': errorMessage
             })
         } else {
-            console.log('The solution is: ', results.insertId);
             res.status(200).send({
                 'code': 200,
                 'success': 'User registration sucessfull',
@@ -54,63 +36,47 @@ exports.create_user = function (req, res) {
 
 exports.user_quiz_details = function (req, res) {
 
-    let user = req.params.user_id;
-console.log(req.body.quiz_questions)
+    let user = req.body.user_id;
+
+    if (req.body.total_correct_answers > 3) {
+        req.body.voucher = voucher_codes.generate({
+            length: 8,
+            count: 1
+        });
+    }
     if (user) {
         let user_quiz_details = {
-            'quiz_questions': req.body.quiz_questions,
-            'answers_index': req.body.answers_index,
-            'voucher': req.body.voucher,
+            'attended_quiz_questions': JSON.stringify(req.body.attended_quiz_questions),
+            'answers_index': JSON.stringify(req.body.answers_index),
+            'voucher': req.body.voucher[0],
             'total_time_taken': req.body.total_time_taken,
-            'correct_answers': req.body.correct_answers,
+            'total_correct_answers': req.body.total_correct_answers,
             'total_question': req.body.total_question,
             'user_id': user,
             'quiz_created_at': new Date()
         }
+
         mysqlConnection.query('INSERT INTO USERS_QUIZ_DETAILS SET ?', user_quiz_details, function (error, results, fields) {
             if (error) {
-                console.log('error ocurred', error);
-                res.send({
+                res.status(500).send({
                     'code': 400,
                     'failed': 'error ocurred'
                 })
             } else {
-                console.log('The solution is: ', results);
-                res.send({
-                    'code': 200,
-                    'success': 'user registered sucessfully'
+                mysqlConnection.query('SELECT voucher from USERS_QUIZ_DETAILS where user_quiz_id = ?', [results.insertId], function (error, results, fields) {
+                    res.status(200).send({
+                        'code': 200,
+                        'voucher': results[0].voucher,
+                        'success': 'voucher generated sucessfully'
+                    });
                 });
+
             }
         });
     } else {
-        res.send({
+        res.status(403).send({
             'code': 403,
             'failed': 'user not found'
         });
     }
 }
-
-
-/* exports.get_employees = function (req, res) {
-    mysqlConnection.query('SELECT * FROM employee_details', function (error, response) {
-        if (error) {
-            return res.status(400).send({
-                message: error
-             });
-        } else {
-            return res.send({ data: response });
-        }
-    });
-}
-
-exports.get_particular_employee = function (req, res) {
-    let emp_id = req.params.employee_id;
-    if (emp_id) {
-        mysqlConnection.query('Select * from employee_details where employee_id=?', emp_id, (error, response)=>{
-            if (error) throw error;
-            return res.send({employee: response})
-        })
-    } else {
-        res.status(400).send({error: true, message: 'please provide employee id'})
-    }
-} */
