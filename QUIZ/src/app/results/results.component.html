@@ -5,12 +5,15 @@
   <br>
   <br>
   <p>
-    You Answered 5 Questions correctly!!!!
+    You Answered {{correctAnswers}} Questions correctly!!!!
   </p>
   
   <br>
   <br>
   
-  <h1>Your Voucher is QQASASHSAMSH</h1>
+  <h1 *ngIf="voucherCode; else noVoucher">Your Voucher code is '{{voucherCode}}'</h1>
+  <ng-template #noVoucher>
+    Better Luck Next Time!!!
+  </ng-template>
 </div>
 

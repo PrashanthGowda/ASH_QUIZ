@@ -12,7 +12,7 @@ exports.create_user = function (req, res) {
         'user_mobile': req.body.user_mobile,
         'user_created_at': new Date()
     }
-    mysqlConnection.query('INSERT INTO users SET ?', user, function (error, results, fields) {
+    mysqlConnection.query('INSERT INTO USERS SET ?', user, function (error, results, fields) {
         if (error) {
             let errorMessage = '';
 
@@ -63,10 +63,11 @@ exports.user_quiz_details = function (req, res) {
                     'failed': 'error ocurred'
                 })
             } else {
-                mysqlConnection.query('SELECT voucher from USERS_QUIZ_DETAILS where user_quiz_id = ?', [results.insertId], function (error, results, fields) {
+                mysqlConnection.query('SELECT voucher, total_correct_answers as correct from USERS_QUIZ_DETAILS where user_quiz_id = ?', [results.insertId], function (error, results, fields) {
                     res.status(200).send({
                         'code': 200,
                         'voucher': results[0].voucher,
+                        'correct': results[0].correct,
                         'success': 'voucher generated sucessfully'
                     });
                 });

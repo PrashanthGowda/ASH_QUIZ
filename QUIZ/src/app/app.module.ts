@@ -15,6 +15,7 @@ import { RulesComponent } from './rules/rules.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { CommonModule } from '@angular/common';
 import { ResultsComponent } from './results/results.component';
+import { FormatTimePipe } from './shared/pipes/format-time.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ResultsComponent } from './results/results.component';
     HeaderComponent,
     RulesComponent,
     QuizComponent,
-    ResultsComponent
+    ResultsComponent,
+    FormatTimePipe
   ],
   imports: [
     BrowserModule,

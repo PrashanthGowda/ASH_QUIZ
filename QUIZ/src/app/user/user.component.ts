@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from './user.service';
 import { MatSnackBar } from '@angular/material';
-import { SharedService } from '../shared/shared.service';
+import { SharedService } from '../shared/services/shared.service';
 
 @Component({
   selector: 'app-user',

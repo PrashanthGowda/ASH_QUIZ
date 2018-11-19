@@ -9,6 +9,7 @@ export class SharedService {
     correctAnswers = 0;
     user_id: any;
     voucher: any;
+    total_correct_answer: any;
 
   constructor() { }
 }

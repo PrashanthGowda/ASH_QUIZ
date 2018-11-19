@@ -1,23 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { QuizService } from './quiz.service';
 import { MatSnackBar } from '@angular/material';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SharedService } from '../shared/shared.service';
+import { SharedService } from '../shared/services/shared.service';
+import { Subscription } from 'rxjs';
+import { TimerService } from '../shared/services/timer.service';
 
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.scss']
 })
-export class QuizComponent implements OnInit {
+export class QuizComponent implements OnInit, OnDestroy {
 
   constructor(
     private quizService: QuizService,
     private snackbar: MatSnackBar,
     private fb: FormBuilder,
     private router: Router,
-    private shared: SharedService
+    private shared: SharedService,
+    private timerService: TimerService
   ) { }
 
   // questions
@@ -33,7 +36,16 @@ export class QuizComponent implements OnInit {
   // validity
   notvalid = true;
 
+  // quiz
+  quizSubscription: Subscription;
+
+  // timer
+  time;
+  timeSubscription: Subscription;
+
+
   ngOnInit() {
+    this.startTimer();
 
     this.questionsForm = this.fb.group({
       option: ''
@@ -53,6 +65,20 @@ export class QuizComponent implements OnInit {
   }
 
 
+  startTimer() {
+    this.timeSubscription = this.timerService.getCounter()
+      .subscribe(
+        time => {
+          this.time = time;
+          if (!time) {
+            this.finishQuiz(this.questionsForm, this.questions[this.questionIndex]);
+          }
+        }
+      );
+  }
+
+
+
   jsonparse(obj) {
     return JSON.parse(obj);
   }
@@ -63,7 +89,7 @@ export class QuizComponent implements OnInit {
 
     // arr.splice(index, 0, item);
     this.questionsAttended.splice(this.questionIndex, 0, question.question_id);
-    this.userAnswered.splice(this.questionIndex, 0, +form.value.option);
+    this.userAnswered.splice(this.questionIndex, 0, form.value.option !== null ? +form.value.option : -1);
 
     if (+form.value.option === question.correct_answer_index) {
 
@@ -77,6 +103,7 @@ export class QuizComponent implements OnInit {
   finishQuiz(form: FormGroup, question) {
 
     this.questionsAttended.splice(this.questionIndex, 0, question.question_id);
+    this.userAnswered.splice(this.questionIndex, 0, form.value.option !== null ? +form.value.option : -1);
 
     if (+form.value.option === question.correct_answer_index) {
       this.shared.correctAnswers += 1;
@@ -97,7 +124,11 @@ export class QuizComponent implements OnInit {
     this.quizService.saveQuizDetails(quizDetails)
       .subscribe(
         res => {
-          this.shared.voucher = res.voucher;
+          if (res.voucher) {
+            this.router.navigate(['/results', res.correct, res.voucher]);
+          } else {
+            this.router.navigate(['/results', res.correct]);
+          }
         },
         err => {
           console.log('Voucher error');
@@ -112,4 +143,11 @@ export class QuizComponent implements OnInit {
       this.notvalid = false;
     }
   }
+
+  ngOnDestroy() {
+    if (this.timeSubscription) {
+      this.timeSubscription.unsubscribe();
+    }
+  }
+
 }

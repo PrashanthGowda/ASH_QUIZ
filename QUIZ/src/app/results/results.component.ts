@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared/services/shared.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-results',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor() { }
+  voucherCode = '';
+  correctAnswers: any;
+  constructor(
+    public shared: SharedService,
+    private activatedRoute: ActivatedRoute) {
+      this.voucherCode = this.activatedRoute.snapshot.params.voucherCode;
+      this.correctAnswers = this.activatedRoute.snapshot.params.correctAnswers;
+    }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

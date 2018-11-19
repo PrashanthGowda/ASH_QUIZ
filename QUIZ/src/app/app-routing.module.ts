@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'user_registration', component: UserComponent },
   { path: 'rules', component: RulesComponent },
   { path: 'quiz', component: QuizComponent },
-  { path: 'results', component: ResultsComponent }
+  { path: 'results/:correctAnswers', component: ResultsComponent },
+  { path: 'results/:correctAnswers/:voucherCode', component: ResultsComponent }
 ];
 
 @NgModule({
