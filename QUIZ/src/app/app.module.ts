@@ -35,7 +35,7 @@ import { FormatTimePipe } from './shared/pipes/format-time.pipe';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('dist/ashrama-quiz/ngsw-worker.js', { enabled: environment.production }),
     AppRoutingModule
   ],
   providers: [],
