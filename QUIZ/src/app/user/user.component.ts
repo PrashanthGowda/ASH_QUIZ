@@ -20,7 +20,10 @@ export class UserComponent implements OnInit {
     private user: UserService,
     private snackbar: MatSnackBar,
     private shared: SharedService
-  ) { }
+  ) {
+    // On load clear everything in local storage
+    localStorage.clear();
+  }
 
   ngOnInit() {
 
@@ -36,20 +39,20 @@ export class UserComponent implements OnInit {
 
   createUser(form: FormGroup) {
     this.user.createUser(form.value)
-    .subscribe(
-      res => {
-        this.snackbar.open(res.success, '', {
-          duration: 3000
-        });
-        this.shared.user_id = res.user_id;
-        localStorage.setItem('userRegistered', 'yes');
-        this.router.navigate(['rules']);
-      },
-      err => {
-        this.snackbar.open(err.error.message, '', {
-          duration: 3000
-        });
-      }
-    );
+      .subscribe(
+        res => {
+          this.snackbar.open(res.success, '', {
+            duration: 3000
+          });
+          this.shared.user_id = res.user_id;
+          localStorage.setItem('userRegistered', 'yes');
+          this.router.navigate(['rules']);
+        },
+        err => {
+          this.snackbar.open(err.error.message, '', {
+            duration: 3000
+          });
+        }
+      );
   }
 }

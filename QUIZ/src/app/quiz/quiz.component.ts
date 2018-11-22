@@ -47,7 +47,6 @@ export class QuizComponent implements OnInit, OnDestroy {
   ngOnInit() {
 
     localStorage.setItem('quizStarted', 'yes');
-    this.startTimer();
 
     this.questionsForm = this.fb.group({
       option: ''
@@ -57,6 +56,7 @@ export class QuizComponent implements OnInit, OnDestroy {
       .subscribe(
         res => {
           this.questions = res['randomQuestions'];
+          this.startTimer();
         },
         err => {
           this.snackbar.open('Something Went Wrong', '', {
@@ -106,7 +106,7 @@ export class QuizComponent implements OnInit, OnDestroy {
 
     this.questionsAttended.splice(this.questionIndex, 0, question.question_id);
     this.userAnswered.splice(this.questionIndex, 0, form.value.option !== null ? +form.value.option : -1);
-
+    debugger;
     if (+form.value.option === question.correct_answer_index) {
       this.shared.correctAnswers += 1;
     }

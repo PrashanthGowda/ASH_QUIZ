@@ -14,6 +14,7 @@ export class RulesComponent implements OnInit {
   }
 
   startQuiz () {
+    localStorage.setItem('rulesVisited', 'yes');
     this.router.navigate(['quiz']);
   }
 

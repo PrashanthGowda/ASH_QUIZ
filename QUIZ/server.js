@@ -37,6 +37,6 @@ app.get('*', (req, res) => {
   }); 
 
 
-app.listen(3625, function () {
-    console.log('Node app is running on port 3625');
+app.listen(8080, function () {
+    console.log('Node app is running on port 8080');
 });
