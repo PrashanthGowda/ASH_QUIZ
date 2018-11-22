@@ -38,11 +38,11 @@ export class UserComponent implements OnInit {
     this.user.createUser(form.value)
     .subscribe(
       res => {
-        debugger;
         this.snackbar.open(res.success, '', {
           duration: 3000
         });
         this.shared.user_id = res.user_id;
+        localStorage.setItem('userRegistered', 'yes');
         this.router.navigate(['rules']);
       },
       err => {

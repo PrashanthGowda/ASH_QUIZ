@@ -9,6 +9,7 @@ const mysqlConnection = require('./server/db-conn');
 const employeeRouter = require('./server/routes/employee');
 const userRouter = require('./server/routes/user');
 const questionsRouter = require('./server/routes/questions');
+const sample = require('./server/routes/sample');
 
 
 
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(morgan('combined'));
 
+app.use('/api', sample);
 app.use('/api/employees', employeeRouter);
 app.use('/api/user', userRouter);
 app.use('/api/questions', questionsRouter);
