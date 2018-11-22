@@ -45,6 +45,8 @@ export class QuizComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
+
+    localStorage.setItem('quizStarted', 'yes');
     this.startTimer();
 
     this.questionsForm = this.fb.group({
@@ -134,7 +136,6 @@ export class QuizComponent implements OnInit, OnDestroy {
           console.log('Voucher error');
         }
       );
-    this.router.navigate(['results']);
   }
 
 
