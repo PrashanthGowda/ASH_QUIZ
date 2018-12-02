@@ -1,7 +1,8 @@
 const mysqlConnection = require('../db-conn');
 
 exports.get_questions = function (req, res) {
-    mysqlConnection.query('SELECT * FROM QUESTIONS limit 5', function (error, response) {
+    let questions = JSON.parse(req.params.questions);
+    mysqlConnection.query('SELECT * FROM ASHRAMA_QUIZ.QUESTIONS WHERE question_id IN (?)', [questions], function (error, response) {
         if (error) {
             return res.status(400).send({
                 message: error
@@ -29,6 +30,23 @@ exports.get_random_questions = function (req, res) {
              });
         } else {
             return res.status(200).send({ randomQuestions: response });
+        }
+    });
+}
+
+
+exports.get_load_questions_to_be_asked = function (req, res) {
+    let sql = `
+     SELECT questions_limit from AGE_GROUP where age_group = ?
+    `
+    let participant = req.params.participant;
+    mysqlConnection.query(sql, participant, function (error, response) {
+        if (error) {
+            return res.status(400).send({
+                message: error
+             });
+        } else {
+            return res.send({ data: response });
         }
     });
 }

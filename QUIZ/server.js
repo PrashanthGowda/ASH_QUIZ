@@ -9,6 +9,8 @@ const mysqlConnection = require('./server/db-conn');
 const employeeRouter = require('./server/routes/employee');
 const userRouter = require('./server/routes/user');
 const questionsRouter = require('./server/routes/questions');
+const countryRouter = require('./server/routes/country');
+const stateRouter = require('./server/routes/state');
 const sample = require('./server/routes/sample');
 
 
@@ -27,6 +29,8 @@ app.use('/api', sample);
 app.use('/api/employees', employeeRouter);
 app.use('/api/user', userRouter);
 app.use('/api/questions', questionsRouter);
+app.use('/api/country', countryRouter);
+app.use('/api/states', stateRouter);
 
 
 

@@ -16,27 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `CATEGORIES`
+-- Table structure for table `AGE_GROUP`
 --
 
-DROP TABLE IF EXISTS `CATEGORIES`;
+DROP TABLE IF EXISTS `AGE_GROUP`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `CATEGORIES` (
-  `category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `category` varchar(255) NOT NULL,
-  PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+CREATE TABLE `AGE_GROUP` (
+  `id` int(11) NOT NULL,
+  `age_group` varchar(45) NOT NULL,
+  `questions_limit` json NOT NULL,
+  `age_limit` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `CATEGORIES`
+-- Dumping data for table `AGE_GROUP`
 --
 
-LOCK TABLES `CATEGORIES` WRITE;
-/*!40000 ALTER TABLE `CATEGORIES` DISABLE KEYS */;
-INSERT INTO `CATEGORIES` VALUES (1,'SwamiVivekananda'),(2,'Hindhuism'),(3,'HindhuMythology'),(4,'ArtArchitecture'),(5,'ArtLiterature'),(6,'History'),(7,'Education'),(8,'SaintsOfIndia'),(9,'RamayanaMahabharatha'),(10,'Sports');
-/*!40000 ALTER TABLE `CATEGORIES` ENABLE KEYS */;
+LOCK TABLES `AGE_GROUP` WRITE;
+/*!40000 ALTER TABLE `AGE_GROUP` DISABLE KEYS */;
+INSERT INTO `AGE_GROUP` VALUES (1,'CHILDREN','[\"11-15\", \"41-50\", \"16-25\", \"31-35\", \"36-40\"]','1-12'),(2,'TEENAGER','[\"1-5\", \"46-50\", \"11-15\", \"21-5\", \"31-35\"]','13-25'),(3,'ADULT','[\"6-10\", \"16-20\", \"36-45\", \"21-30\", \"41-50\"]','26-50'),(4,'GRAND_ADULT','[\"41-50\", \"26-30\", \"1-5\", \"21-25\", \"31-40\"]','50-100');
+/*!40000 ALTER TABLE `AGE_GROUP` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

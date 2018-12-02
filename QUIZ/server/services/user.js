@@ -10,6 +10,8 @@ exports.create_user = function (req, res) {
         'user_gender': req.body.user_gender,
         'user_email': req.body.user_email,
         'user_mobile': req.body.user_mobile,
+        'user_country': req.body.user_country,
+        'user_state': req.body.user_state,
         'user_created_at': new Date()
     }
     mysqlConnection.query('INSERT INTO USERS SET ?', user, function (error, results, fields) {
@@ -24,11 +26,25 @@ exports.create_user = function (req, res) {
                 'message': errorMessage
             })
         } else {
-            res.status(200).send({
-                'code': 200,
-                'success': 'User registration sucessfull',
-                'user_id': results.insertId
+            let user = results.insertId;
+            mysqlConnection.query('SELECT user_age from USERS where user_id = ?', [results.insertId], function (error, results, fields) {
+                if (error) {
+                    res.status(500).send({
+                        'code': 400,
+                        'message': error
+                    })
+                } else {
+                    res.status(200).send({
+                        'code': 200,
+                        'success': 'User registration sucessfull',
+                        'user_id': user,
+                        'user_age': results[0].user_age
+                    });
+                }
+                
             });
+
+            
         }
     });
 }

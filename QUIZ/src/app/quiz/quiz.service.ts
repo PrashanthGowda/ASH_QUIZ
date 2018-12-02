@@ -14,7 +14,7 @@ export class QuizService {
   constructor(private http: HttpClient) { }
 
   getRandomQuestion(): Observable<IQuestions> {
-    return this.http.get<IQuestions>(this.API_URL + 'api/questions/get_random_questions');
+    return this.http.get<IQuestions>(this.API_URL + 'api/questions/' + localStorage.getItem('questionsToBeAsked'));
   }
 
   saveQuizDetails(details): Observable<any> {
