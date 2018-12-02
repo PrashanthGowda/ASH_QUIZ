@@ -14,3 +14,5 @@ Please note that in most cases the username above will be correct, however pleas
 
 
 35.154.129.152
+
+sudo pm2 start server.js --name Express
