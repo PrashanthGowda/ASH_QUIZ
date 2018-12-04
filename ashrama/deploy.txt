@@ -1,0 +1,26 @@
+Install - Nginx
+          Node.js
+          Angular
+          Mysql
+          git
+
+Steps: 
+        sudo su
+        yum update
+
+                    sudo rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+                    yum install nginx
+
+                    root /usr/share/nginx/html;
+                    Create sites-enabled availablesudo yum install nodejs
+                    sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+        
+        node:
+       sudo curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+       sudo yum install -y nodejs
+
+       mysql:
+       sudo yum localinstall https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+       sudo yum --disablerepo=mysql80-community --enablerepo=mysql57-community install mysql-community-server
+    sudo systemctl start mysqld
+    sudo grep 'A temporary password is generated for root@localhost' /var/log/mysqld.log |tail -1
