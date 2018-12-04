@@ -1,16 +1,14 @@
-
 To access your instance:
 Open an SSH client. (find out how to connect using PuTTY)
 Locate your private key file (ashrama.pem). The wizard automatically detects the key you used to launch the instance.
 Your key must not be publicly viewable for SSH to work. Use this command if needed:
 chmod 400 ashrama.pem
 Connect to your instance using its Public DNS:
-ec2-35-154-129-152.ap-south-1.compute.amazonaws.com
-
+ec2-13-233-227-25.ap-south-1.compute.amazonaws.com
 Example:
-ssh -i "ashrama.pem" ec2-user@ec2-35-154-129-152.ap-south-1.compute.amazonaws.com
-
+ssh -i "ashrama.pem" ec2-user@ec2-13-233-227-25.ap-south-1.compute.amazonaws.com
 Please note that in most cases the username above will be correct, however please ensure that you read your AMI usage instructions to ensure that the AMI owner has not changed the default AMI username.
+If you need any assistance connecting to your instance, please see our connection documentation.
 
 
 35.154.129.152
