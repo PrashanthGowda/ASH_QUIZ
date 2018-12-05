@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.20, for Linux (x86_64)
 --
--- Host: 127.0.0.1    Database: ASHRAMA_QUIZ
+-- Host: localhost    Database: ASHRAMA_QUIZ
 -- ------------------------------------------------------
--- Server version	5.7.21
+-- Server version	5.7.24-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,7 +37,7 @@ CREATE TABLE `AGE_GROUP` (
 
 LOCK TABLES `AGE_GROUP` WRITE;
 /*!40000 ALTER TABLE `AGE_GROUP` DISABLE KEYS */;
-INSERT INTO `AGE_GROUP` VALUES (1,'CHILDREN','[\"11-15\", \"41-50\", \"16-25\", \"31-35\", \"36-40\"]','1-12'),(2,'TEENAGER','[\"1-5\", \"46-50\", \"11-15\", \"21-5\", \"31-35\"]','13-25'),(3,'ADULT','[\"6-10\", \"16-20\", \"36-45\", \"21-30\", \"41-50\"]','26-50'),(4,'GRAND_ADULT','[\"41-50\", \"26-30\", \"1-5\", \"21-25\", \"31-40\"]','50-100');
+INSERT INTO `AGE_GROUP` VALUES (1,'CHILDREN','[1, 3, 5, 11, 14, 26, 29, 38, 45, 46]','1-12'),(2,'TEENAGER','[2, 3, 7, 9, 12, 25, 33, 35, 43, 48]','13-25'),(3,'ADULT','[1, 5, 6, 12, 17, 23, 28, 30, 34, 40, 44, 47, 50]','26-50'),(4,'GRAND_ADULT','[4, 8, 10, 13, 16, 19, 22, 24, 27, 31, 36, 39, 42, 48, 49]','51-100');
 /*!40000 ALTER TABLE `AGE_GROUP` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-02 20:31:05
+-- Dump completed on 2018-12-05 14:55:53
