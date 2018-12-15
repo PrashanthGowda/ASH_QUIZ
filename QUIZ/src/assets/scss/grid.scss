@@ -9,6 +9,7 @@ $font-height: 1.5;
 
 // colors
 $dark-grey: #333447;
+$white-font: #fff;
 
 // universal
 
@@ -21,12 +22,14 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  background-color: #eee;
+  // background-color: #eee;
+  background: rgb(204,165,85);
+    background: radial-gradient(circle, #e9a441 -100%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 100%);
 }
 
 * {
   font-family: $font-family;
-  // color: $dark-grey;
+  color: $white-font;
   line-height: $font-height;
 }
 

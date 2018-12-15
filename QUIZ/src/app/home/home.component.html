@@ -1,0 +1,41 @@
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-12 center">
+      <img class="home__logo" src="assets/quiz_images/vk.png" alt="" srcset="">
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br *ngIf="!(mobile | async)">
+  <br *ngIf="!(mobile | async)">
+  <div class="row">
+    <div class="col-12 center">
+      <h1 class="mat-h1 home__welcome">Welcome to Quiz</h1>
+      <h1 class="mat-h1 home__welcome">On</h1>
+      <h1 class="mat-h1 home__welcome">Swami Vivekananda</h1>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br *ngIf="!(mobile | async)">
+  <br *ngIf="!(mobile | async)">
+  <br *ngIf="!(mobile | async)">
+  <br *ngIf="!(mobile | async)">
+  <br *ngIf="!(mobile | async)">
+  <div class="row center">
+    <div class="col-4 col-12-sm">
+        <button mat-button [matMenuTriggerFor]="menu" class="white-font">How to Play</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openWatchVideoComponent()">Watch Video</button>
+          <button mat-menu-item (click)="openReadAboutComponent()">Read</button>
+        </mat-menu>
+    </div>
+    <div class="col-4 col-12-sm"><button mat-button [routerLink]="['/user_registration']" routerLinkActive="router-link-active" class="white-font">Play Quiz</button></div>
+    <div class="col-4 col-12-sm"><button mat-button (click)="openContactUsComponent()" class="white-font">Contact Us</button></div>
+  </div>
+</div>

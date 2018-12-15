@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from './user.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatDialog } from '@angular/material';
 import { SharedService } from '../shared/services/shared.service';
 import { ICountry, IState } from './user.model';
 import { Observable } from 'rxjs';
@@ -30,7 +30,8 @@ export class UserComponent implements OnInit {
     private router: Router,
     private user: UserService,
     private snackbar: MatSnackBar,
-    private shared: SharedService
+    private shared: SharedService,
+    public dialogx: MatDialog
   ) {
     // On load clear everything in local storage
     localStorage.clear();

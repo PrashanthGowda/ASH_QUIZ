@@ -8,10 +8,12 @@ import { ResultsComponent } from './results/results.component';
 import { QuizGuardService } from './quiz/quiz-guard.service';
 import { UserGuardService } from './user/user-guard.service';
 import { RulesGuardService } from './rules/rules-guard.service';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'user_registration', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent},
   { path: 'user_registration', component: UserComponent},
   { path: 'rules', component: RulesComponent, canActivate: [UserGuardService, RulesGuardService] },
   { path: 'quiz', component: QuizComponent, canActivate: [UserGuardService, QuizGuardService] },
