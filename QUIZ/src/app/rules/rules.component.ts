@@ -22,11 +22,16 @@ export class RulesComponent implements OnInit {
     const participant = localStorage.getItem('UserIs');
     this.rules.loadquestionsToBeAsked(participant).subscribe(
       questionsToBeAsked => {
-        let questions = [];
-        questions = questionsToBeAsked.map(element => {
-          const fromTo = element.split('-');
-          return Math.floor(Math.random() * (+fromTo[1] - +fromTo[0] + 1)) + +fromTo[0];
-        });
+        const questions = [];
+
+        for (let i = 1; i <= 5; i++) {
+          const item = questionsToBeAsked[Math.floor(Math.random() * questionsToBeAsked.length)]
+          if (questions.indexOf(item) === -1) {
+            questions.push(item)
+          } else {
+            i--;
+          }
+        }
         localStorage.setItem('questionsToBeAsked', JSON.stringify(questions));
       }
 

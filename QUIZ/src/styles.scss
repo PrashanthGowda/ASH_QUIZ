@@ -217,3 +217,12 @@ $breakpoint-large: 60em; // 960px
 .white-font {
   color: #fff;
 }
+
+
+.linear-gradient {
+  background-image: linear-gradient(to right bottom, #ff9800, #ffffff);
+}
+
+mat-dialog-container {
+  background-image: linear-gradient(to right bottom, #ff9800, #ffffff) !important;
+}
