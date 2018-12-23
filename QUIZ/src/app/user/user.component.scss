@@ -1,0 +1,15 @@
+.user_registration {
+    position: absolute;
+    top: -6rem;
+    left: 5rem; 
+}
+
+
+@media only screen and (max-width: 600px) {
+    .user_registration {
+        position: unset;
+        top: 0rem;
+        left: 0rem;
+        margin-top: -3rem; 
+    }
+  }

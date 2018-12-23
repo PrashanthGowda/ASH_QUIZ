@@ -36,9 +36,10 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  // background-color: #eee;
-  background: rgb(204,165,85);
-    background: radial-gradient(circle, #e9a441 -100%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 100%);
+  // background-color: #eee;background: url('img/background.jpg') repeat;
+  // background: rgb(204,165,85) ;
+  background:radial-gradient(circle, #e9a441 -100%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 100%) ;
+    // background: , url('assets/quiz_images/design_images/water_mark.jpg');
 }
 
 
