@@ -12,7 +12,7 @@ exports.create_user = function (req, res) {
         'user_mobile': req.body.user_mobile,
         'user_country': req.body.user_country,
         'user_state': req.body.user_state,
-        'user_created_at': new Date()
+        'user_created_at': Date.now()
     }
     mysqlConnection.query('INSERT INTO USERS SET ?', user, function (error, results, fields) {
         if (error) {
@@ -69,7 +69,7 @@ exports.user_quiz_details = function (req, res) {
             'total_correct_answers': req.body.total_correct_answers,
             'total_question': req.body.total_question,
             'user_id': user,
-            'quiz_created_at': new Date()
+            'quiz_created_at': Date.now() 
         }
 
         mysqlConnection.query('INSERT INTO USERS_QUIZ_DETAILS SET ?', user_quiz_details, function (error, results, fields) {
