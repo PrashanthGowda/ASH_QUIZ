@@ -10,7 +10,9 @@
 .home__logo--gif {
   width: 30%;
   height: auto;
-  margin: 5rem 0rem 0rem 11rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home__welcome {
@@ -25,10 +27,11 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 20%;
   }
   .home__logo--gif {
     width: 80%;
-    height: auto;
-    margin: 1rem 0rem 0rem 3rem;
+    // height: auto;
+    // margin: 1rem 0rem 0rem 3rem;
   }
 }

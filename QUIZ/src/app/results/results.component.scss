@@ -1,3 +1,6 @@
+// <!-- class="glow"  -->
+ 
+
 .voucher {
     width: 22rem;
     height: 12rem;
@@ -16,6 +19,7 @@
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
   }
+
   
   @keyframes glow {
     from {

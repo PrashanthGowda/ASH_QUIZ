@@ -10,7 +10,7 @@ export class TimerService {
   constructor() { }
 
 
-  counter = 3 * 60;
+  counter = 100 * 60;
   tick = 1000;
 
   getCounter() {

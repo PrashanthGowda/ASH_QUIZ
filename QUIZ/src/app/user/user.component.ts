@@ -51,7 +51,7 @@ export class UserComponent implements OnInit {
       'user_country': ['', Validators.required],
       'user_state': ['', Validators.required]
     });
-    this.userRegistrationForm.controls['user_state'].disable();
+    // this.userRegistrationForm.controls['user_state'].disable();
     this.loadCountries();
 
     this.filteredCountries = this.userRegistrationForm.controls['user_country'].valueChanges
@@ -114,11 +114,11 @@ export class UserComponent implements OnInit {
     if (_event.isUserInput) {
       this.states = [];
       this.states.slice();
-      this.userRegistrationForm.patchValue({ 'user_state': '' });
+      // this.userRegistrationForm.patchValue({ 'user_state': '' });
       this.user.getStates(country).subscribe(
         states => {
           this.states = states;
-          this.userRegistrationForm.controls['user_state'].enable();
+          // this.userRegistrationForm.controls['user_state'].enable();
           this.filteredStates = this.userRegistrationForm.controls['user_state'].valueChanges
             .pipe(
               startWith(''),
