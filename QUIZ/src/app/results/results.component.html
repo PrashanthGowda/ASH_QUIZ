@@ -4,7 +4,7 @@
     <div id="voucher_download" *ngIf="voucherCode; else noVoucher">
       <h1 style="color: #ff3300">Ramakrishna Math, Bengaluru</h1> <br>
       <h1 class="mat-h1" style="color: #0066ff">Quiz On <br /> Swami Vivekananda</h1> <br>
-      <h1 class="mat-h1" style="color: #E8A83E">Congratulations Name!!! <br /> You won a Gift Voucher of Rs 500</h1><br>
+      <h1 class="mat-h1" style="color: #E8A83E">Congratulations {{username}} <br /> You won a Gift Voucher of Rs 500</h1><br>
       <h1 class="mat-h1" style="color:#ff3300">Voucher Code: '{{voucherCode}}'</h1><br>
 
       <h1 class="mat-h1" style="color: #E8A83E">Please visit https://shop.advaitaashrama.org <br /> to redeem Voucher
@@ -15,6 +15,7 @@
     <ng-template #noVoucher>
       <h1 style="color: #ff3300">Ramakrishna Math, Bengaluru</h1> <br>
       <h1 class="mat-h1" style="color: #0066ff">Quiz On <br /> Swami Vivekananda</h1> <br>
+      <h1 style="color: #E8A83E">Sorry {{username}} </h1><br>
       <h1 style="color: #E8A83E">Better Luck Next Time!!!</h1>
 
     </ng-template>
@@ -34,3 +35,11 @@
     </button>
   </div>
 </div>
+
+<div *ngIf="!voucherCode" class="row white-font center">
+    <div class="col-12">
+      <button mat-icon-button matTooltip="home" [routerLink]="['/home']">
+        <mat-icon aria-label="Example icon-button with a heart icon">home</mat-icon>
+      </button>
+    </div>
+  </div>

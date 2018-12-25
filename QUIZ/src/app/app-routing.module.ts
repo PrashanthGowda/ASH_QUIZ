@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: 'user_registration', component: UserComponent},
   { path: 'rules', component: RulesComponent, canActivate: [UserGuardService, RulesGuardService] },
   { path: 'quiz', component: QuizComponent, canActivate: [UserGuardService, QuizGuardService] },
-  { path: 'results/:correctAnswers', component: ResultsComponent, canActivate: [UserGuardService]  },
-  { path: 'results/:correctAnswers/:voucherCode', component: ResultsComponent, canActivate: [UserGuardService]  }
+  { path: 'results/:user/:correctAnswers', component: ResultsComponent, canActivate: [UserGuardService]  },
+  { path: 'results/:user/:correctAnswers/:voucherCode', component: ResultsComponent, canActivate: [UserGuardService]  }
 ];
 
 @NgModule({

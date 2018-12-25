@@ -3,6 +3,7 @@ import { SharedService } from '../shared/services/shared.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-results',
@@ -12,15 +13,21 @@ import * as html2canvas from 'html2canvas';
 export class ResultsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   voucherCode = '';
+  username = '';
   correctAnswers: any;
   constructor(
     public shared: SharedService,
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private user: UserService
   ) {
+    this.user.getUser(this.activatedRoute.snapshot.params.user).subscribe(
+      username => {
+        this.username = username;
+      }
+    );
     this.voucherCode = this.activatedRoute.snapshot.params.voucherCode;
-    debugger;
     this.correctAnswers = this.activatedRoute.snapshot.params.correctAnswers;
   }
 
@@ -37,12 +44,6 @@ export class ResultsComponent implements OnInit, OnDestroy, AfterViewInit {
     this.shared.voucher = '';
   }
 
-  /* downloadVoucher() {
-
-  } */
-
-
-
   async downloadVoucher() {
     const doc = new jsPDF('p', 'mm', 'a4');
     const voucher = document.getElementById('print-voucher');
@@ -58,6 +59,6 @@ export class ResultsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument.body.style.background = 'url("/assets/quiz_images/design_images/water_mark.jpg")';
- }
+  }
 
 }

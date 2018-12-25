@@ -21,6 +21,16 @@ export class UserService {
   }
 
 
+  getUser(user): Observable<any> {
+    const payload = { 'user': user };
+    return this.http.post<any>(this.API_URL + 'api/user/get-user', payload)
+    .pipe(
+      map(
+        response => response['username']
+      )
+    );
+  }
+
   loadCountries(): Observable<ICountry[]> {
     return this.http.get<ICountry[]>(this.API_URL + 'api/country/get-all-countries')
       .pipe(

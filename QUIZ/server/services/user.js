@@ -49,6 +49,29 @@ exports.create_user = function (req, res) {
     });
 }
 
+exports.get_user = function (req, res) {
+    let user = req.body.user;
+
+    if (user) {
+        mysqlConnection.query('SELECT user_name FROM ASHRAMA_QUIZ.USERS where user_id = ?', [user], function (error, results, fields) {
+                if (error) {
+                    res.status(500).send({
+                        'code': 400,
+                        'message': error
+                    })
+                } else {
+                    res.status(200).send({
+                        'code': 200,
+                        'success': 'The User is',
+                        'username': results[0].user_name
+                    });
+                }
+                
+            });
+    }
+
+}  
+
 
 exports.user_quiz_details = function (req, res) {
 
@@ -79,11 +102,12 @@ exports.user_quiz_details = function (req, res) {
                     'failed': 'error ocurred'
                 })
             } else {
-                mysqlConnection.query('SELECT voucher, total_correct_answers as correct from USERS_QUIZ_DETAILS where user_quiz_id = ?', [results.insertId], function (error, results, fields) {
+                mysqlConnection.query('SELECT user_id, voucher, total_correct_answers as correct from USERS_QUIZ_DETAILS where user_quiz_id = ?', [results.insertId], function (error, results, fields) {
                     res.status(200).send({
                         'code': 200,
                         'voucher': results[0].voucher,
                         'correct': results[0].correct,
+                        'user': results[0].user_id,
                         'success': 'voucher generated sucessfully'
                     });
                 });
