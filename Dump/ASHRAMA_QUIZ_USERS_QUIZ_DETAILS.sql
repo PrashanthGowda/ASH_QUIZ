@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.20, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
 --
--- Host: localhost    Database: ASHRAMA_QUIZ
+-- Host: 127.0.0.1    Database: ASHRAMA_QUIZ
 -- ------------------------------------------------------
--- Server version	5.7.24-0ubuntu0.18.04.1
+-- Server version	5.7.21
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,7 +37,7 @@ CREATE TABLE `USERS_QUIZ_DETAILS` (
   UNIQUE KEY `voucher_UNIQUE` (`voucher`),
   KEY `users_quiz_details_ibfk_1` (`user_id`),
   CONSTRAINT `users_quiz_details_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `USERS` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,6 @@ CREATE TABLE `USERS_QUIZ_DETAILS` (
 
 LOCK TABLES `USERS_QUIZ_DETAILS` WRITE;
 /*!40000 ALTER TABLE `USERS_QUIZ_DETAILS` DISABLE KEYS */;
-INSERT INTO `USERS_QUIZ_DETAILS` VALUES (1,'[4, 5, 3, 9, 8]','[0, 0, 0, 1, -1]',NULL,'10 mins',0,5,61,'2018-12-02 18:50:52.493'),(2,'[5, 4]','[3, 3]',NULL,'10 mins',0,5,63,'2018-12-02 18:52:20.387'),(3,'[4, 3, 5, 9, 8]','[1, 3, 3, 3, 0]',NULL,'10 mins',3,5,64,'2018-12-02 18:54:22.443'),(4,'[3, 5, 4, 10, 8]','[3, 3, 1, 2, -1]',NULL,'10 mins',3,5,65,'2018-12-02 18:55:45.574'),(5,'[5, 4, 3, 9]','[3, 1, 3, -1]',NULL,'10 mins',3,5,66,'2018-12-02 18:58:50.309'),(6,'[8, 17, 29, 41, 44]','[1, 1, 2, 3, 1]',NULL,'10 mins',1,5,74,'2018-12-02 20:28:17.816');
 /*!40000 ALTER TABLE `USERS_QUIZ_DETAILS` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-05 14:55:53
+-- Dump completed on 2018-12-28  1:00:39
