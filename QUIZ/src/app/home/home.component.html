@@ -1,0 +1,33 @@
+
+<app-header></app-header>
+<div class="row">
+
+    <!-- <div class="col-3 col-12-sm">
+      <img class="home__logo--yellow" src="assets/quiz_images/design_images/logo.png" alt="" srcset="">
+    </div> -->
+    <div class="col-12 col-12-sm">
+      <img class="home__logo--gif" src="assets/quiz_images/design_images/main_gif.gif" alt="" srcset="">
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 center">
+      <h1 class="mat-h1 home__welcome">Welcome to <br/> Quiz On Swami Vivekananda</h1>
+      <!-- <h1 class="mat-h1 home__welcome">Quiz On Swami Vivekananda</h1> -->
+      <h1 class="mat-h1 home__welcome" style="color: #0066ff">Play Quiz And Win Vouchers Upto Rs 500<sup>*</sup>  </h1>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row center">
+    <div class="col-4 col-12-sm">
+        <button mat-button [matMenuTriggerFor]="menu" class="white-font"  style="color: #F3983E; font-size: 20px">How to Play</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openWatchVideoComponent()"  >Watch Video</button>
+          <button mat-menu-item (click)="openReadAboutComponent()" >Read</button>
+        </mat-menu>
+    </div>
+    <div class="col-4 col-12-sm"><button mat-button color="basic" [routerLink]="['/user_registration']" routerLinkActive="router-link-active" class="white-font" style="color: #F3983E;  font-size: 20px">Play Quiz</button></div>
+    <div class="col-4 col-12-sm"><button mat-button color="basic" (click)="openContactUsComponent()" class="white-font" style="color: #F3983E;  font-size: 20px">Contact Us</button></div>
+  </div>
+</div>

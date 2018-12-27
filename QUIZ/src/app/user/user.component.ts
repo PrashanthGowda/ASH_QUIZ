@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from './user.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatDialog } from '@angular/material';
 import { SharedService } from '../shared/services/shared.service';
 import { ICountry, IState } from './user.model';
 import { Observable } from 'rxjs';
@@ -30,7 +30,8 @@ export class UserComponent implements OnInit {
     private router: Router,
     private user: UserService,
     private snackbar: MatSnackBar,
-    private shared: SharedService
+    private shared: SharedService,
+    public dialogx: MatDialog
   ) {
     // On load clear everything in local storage
     localStorage.clear();
@@ -50,7 +51,7 @@ export class UserComponent implements OnInit {
       'user_country': ['', Validators.required],
       'user_state': ['', Validators.required]
     });
-    this.userRegistrationForm.controls['user_state'].disable();
+    // this.userRegistrationForm.controls['user_state'].disable();
     this.loadCountries();
 
     this.filteredCountries = this.userRegistrationForm.controls['user_country'].valueChanges
@@ -113,11 +114,11 @@ export class UserComponent implements OnInit {
     if (_event.isUserInput) {
       this.states = [];
       this.states.slice();
-      this.userRegistrationForm.patchValue({ 'user_state': '' });
+      // this.userRegistrationForm.patchValue({ 'user_state': '' });
       this.user.getStates(country).subscribe(
         states => {
           this.states = states;
-          this.userRegistrationForm.controls['user_state'].enable();
+          // this.userRegistrationForm.controls['user_state'].enable();
           this.filteredStates = this.userRegistrationForm.controls['user_state'].valueChanges
             .pipe(
               startWith(''),

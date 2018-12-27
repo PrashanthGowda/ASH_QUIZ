@@ -126,9 +126,9 @@ export class QuizComponent implements OnInit, OnDestroy {
       .subscribe(
         res => {
           if (res.voucher) {
-            this.router.navigate(['/results', res.correct, res.voucher]);
+            this.router.navigate(['/results', res.user, res.correct, res.voucher], { skipLocationChange: true });
           } else {
-            this.router.navigate(['/results', res.correct]);
+            this.router.navigate(['/results', res.user, res.correct], { skipLocationChange: true });
           }
         },
         err => {

@@ -6,3 +6,19 @@
   .radio-button {
     margin: 5px;
   }
+
+
+  .quiz_image {
+    width: 20%;
+    height: auto;
+    margin-left: 16rem;
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .quiz_image {
+      width: 40%;
+      height: auto;
+      margin-left: 8rem;
+    }
+  }

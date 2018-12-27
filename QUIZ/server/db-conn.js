@@ -3,7 +3,7 @@ const mysql = require('mysql');
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Root@1234',
+    password: 'root',
     database: 'ASHRAMA_QUIZ'
 });
 

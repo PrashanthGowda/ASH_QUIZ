@@ -16,16 +16,24 @@ import { QuizComponent } from './quiz/quiz.component';
 import { CommonModule } from '@angular/common';
 import { ResultsComponent } from './results/results.component';
 import { FormatTimePipe } from './shared/pipes/format-time.pipe';
+import { HomeComponent } from './home/home.component';
+import { ReadAboutQuizComponent } from './shared/components/read-about-quiz/read-about-quiz.component';
+import { ContactUsComponent } from './shared/components/contact-us/contact-us.component';
+import { WatchVideoComponent } from './shared/components/watch-video/watch-video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     UserComponent,
     HeaderComponent,
     RulesComponent,
     QuizComponent,
     ResultsComponent,
-    FormatTimePipe
+    FormatTimePipe,
+    ReadAboutQuizComponent,
+    ContactUsComponent,
+    WatchVideoComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +47,11 @@ import { FormatTimePipe } from './shared/pipes/format-time.pipe';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    ReadAboutQuizComponent,
+    ContactUsComponent,
+    WatchVideoComponent
+  ]
 })
 export class AppModule { }

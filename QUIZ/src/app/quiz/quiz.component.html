@@ -1,22 +1,24 @@
+<app-header></app-header>
 <div class="container">
   <div class="row">
-    <h3 class="float-right">Timer: {{time | formatTime}}</h3>
+    <h3 class="float-right white-font">Timer: {{time | formatTime}}</h3>
   </div>
 </div>
 <div class="container">
   <div class="row">
-    <mat-card class="mat-elevation-z12">
+    <mat-card class="mat-elevation-z12  linear-gradient">
       <form [formGroup]="questionsForm">
       <div *ngIf="questions.length">
         <h3>Question {{ questionIndex + 1 }}:</h3>
         <p>{{ questions[questionIndex].question}}</p>
+        <img *ngIf="questions[questionIndex].image" class="quiz_image" src="assets/quiz_images/{{questions[questionIndex].image}}" alt="" srcset="">
         <br>
         <div *ngIf="jsonparse(questions[questionIndex].question_options); let data">
           <mat-radio-group class="radio-group" formControlName="option" (change)="radioChange($event)">
-            <mat-radio-button class="radio-button" value="0">{{data[0]}}</mat-radio-button>
-            <mat-radio-button class="radio-button" value="1">{{data[1]}}</mat-radio-button>
-            <mat-radio-button class="radio-button" value="2">{{data[2]}}</mat-radio-button>
-            <mat-radio-button class="radio-button" value="3">{{data[3]}}</mat-radio-button>
+            <mat-radio-button color="warn" class="radio-button" value="0">{{data[0]}}</mat-radio-button>
+            <mat-radio-button color="warn" class="radio-button" value="1">{{data[1]}}</mat-radio-button>
+            <mat-radio-button color="warn" class="radio-button" value="2">{{data[2]}}</mat-radio-button>
+            <mat-radio-button color="warn" class="radio-button" value="3">{{data[3]}}</mat-radio-button>
           </mat-radio-group>
         </div>
         <br>

@@ -1,7 +1,40 @@
-.icon {
-    padding: 0 14px;
+.icon_image {
+    width: 10%;
+  }
+
+
+  .home__logo {
+    height: auto;
   }
   
-  .spacer {
-    flex: 1 1 auto;
+  .home__logo--yellow {
+    width: 30%;
+    height: auto;
+  }
+  
+  .home__logo--gif {
+    width: 30%;
+    height: auto;
+    margin: 5rem 0rem 0rem 11rem;
+  }
+  
+  .home__welcome {
+    color: #FF9800;
+    font-style: italic;
+  }
+  
+  
+  
+  @media only screen and (max-width: 600px) {
+    .home__logo--yellow {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 20%;
+    }
+    .home__logo--gif {
+      width: 80%;
+      height: auto;
+      margin: 1rem 0rem 0rem 3rem;
+    }
   }
