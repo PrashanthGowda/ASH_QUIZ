@@ -40,7 +40,7 @@ export class QuizComponent implements OnInit, OnDestroy {
   quizSubscription: Subscription;
 
   // timer
-  time = 150;
+  time;
   timeSubscription: Subscription;
 
 
