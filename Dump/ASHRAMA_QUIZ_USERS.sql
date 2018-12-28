@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.17, for macos10.12 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.20, for Linux (x86_64)
 --
--- Host: 127.0.0.1    Database: ASHRAMA_QUIZ
+-- Host: localhost    Database: ASHRAMA_QUIZ
 -- ------------------------------------------------------
--- Server version	5.7.21
+-- Server version	5.7.24-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -35,7 +35,7 @@ CREATE TABLE `USERS` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_mobile_UNIQUE` (`user_mobile`),
   UNIQUE KEY `user_id_UNIQUE` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=143 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,6 +44,7 @@ CREATE TABLE `USERS` (
 
 LOCK TABLES `USERS` WRITE;
 /*!40000 ALTER TABLE `USERS` DISABLE KEYS */;
+INSERT INTO `USERS` VALUES (10,'Prashanth 10',21,'male','jp@gmail.com','213123','1546016880244','Andhra Pradesh','India'),(11,'Prashant 8',21,'male','jp@gmaol.xom','73123312','1546016989502','Arunachal Pradesh','India'),(12,'prashanth 10',32,'male','nksd@anal','17432','1546017832072','Karnataka','India'),(13,'prashanth 9',23,'male','jp@fmak','2132312','1546018079620','Karnataka','India'),(14,'prashanth8',21,'male','jp@jkda','21321K','1546018175989','Kerala','India'),(15,'prashanth7',21,'male','kdas@kasdk','31231','1546018253540','Andaman and Nicobar Islands','India'),(16,'test',21,'male','askldsl@sldasdl','231231','1546018713244','Karnataka','India'),(17,'pras',12,'male','sdas@jasasj','12312','1546018814150','Karnataka','India'),(18,'dasd',21,'male','wdas@sadas','123213','1546019192879','dfsd','India'),(19,'asdasdasd',12,'male','wdasdas@asdasd','1231231','1546019245188','Andhra Pradesh','India'),(20,'adsda',21,'male','DAS@D','131231','1546019414076','Andhra Pradesh','India'),(21,'asds',23,'male','dasda@sdas','123123','1546019643729','Andhra Pradesh','India'),(22,'asdasd',12,'male','123121321','23123','1546019738202','Andaman and Nicobar Islands','India'),(23,'asdas',21,'male','dasd@asdsa','dadas','1546019787278','Andhra Pradesh','India'),(24,'dasd',21,'male','dfsdfdkW@knksdn','2131231','1546019870416','Andaman and Nicobar Islands','India'),(26,'dasd',21,'male','dasda@asda','1231222','1546019948329','Andaman and Nicobar Islands','India'),(27,'adasd',21,'male','DSDAS@JNAJS','122311','1546020007613','Andhra Pradesh','India'),(29,'ASDAS',22,'male','DASD#ASDS','12312111','1546020076177','Andhra Pradesh','India'),(30,'123gfsdsf',12,'male','saadsd#sads','123123123','1546020164659','Andhra Pradesh','India'),(32,'qwqwdq',21,'male','sdskd#kskad','1231231122','1546020229095','Andaman and Nicobar Islands','India'),(34,'Prashas',12,'male','jadjs@jasjd','12312312312312','1546020533540','Andhra Pradesh','India'),(35,'dfsdf',22,'male','sdsd#asdasd','1231231231','1546020735082','Andhra Pradesh','India'),(37,'asaks',12,'male','asdas@asda','23123qqq','1546020958415','Karnataka','India'),(38,'sadas',12,'male','dfa@asdas','1212','1546020998369','Andhra Pradesh','India'),(39,'`dasda@',21,'male','DAS@ASDAS','231231312312','1546021035681','Karnataka','India'),(41,'SDADA`',221,'male','ASAS#ASDSD','23123122','1546021201447','Andhra Pradesh','India'),(42,'ASDASDA',21,'male','WDAS@SADASD','12312312','1546021433047','Andaman and Nicobar Islands','India'),(43,'DSDSDAD',21,'male','JP@SADSAS','2312312','1546021700223','Andhra Pradesh','India'),(45,'ASDASD',122,'male','SDASD','123122112','1546021834409','Andaman and Nicobar Islands','India');
 /*!40000 ALTER TABLE `USERS` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-28  1:00:38
+-- Dump completed on 2018-12-29  0:05:20
