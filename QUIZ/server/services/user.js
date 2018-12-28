@@ -77,12 +77,22 @@ exports.user_quiz_details = function (req, res) {
 
     let user = req.body.user_id;
 
-    if (req.body.total_correct_answers > 3) {
+    if (req.body.total_correct_answers === 8 || req.body.total_correct_answers === 9) {
         req.body.voucher = voucher_codes.generate({
+            prefix: "rkm-",
             length: 8,
             count: 1
         });
+        req.body.voucher_amount = 200;
+    } else if (req.body.total_correct_answers === 10) {
+        req.body.voucher = voucher_codes.generate({
+            prefix: "viveka-",
+            length: 8,
+            count: 1
+        });
+        req.body.voucher_amount = 300;
     }
+
     if (user) {
         let user_quiz_details = {
             'attended_quiz_questions': JSON.stringify(req.body.attended_quiz_questions),
@@ -92,7 +102,8 @@ exports.user_quiz_details = function (req, res) {
             'total_correct_answers': req.body.total_correct_answers,
             'total_question': req.body.total_question,
             'user_id': user,
-            'quiz_created_at': Date.now() 
+            'quiz_created_at': Date.now(),
+            'voucher_amount': req.body.voucher_amount
         }
 
         mysqlConnection.query('INSERT INTO USERS_QUIZ_DETAILS SET ?', user_quiz_details, function (error, results, fields) {
@@ -106,6 +117,7 @@ exports.user_quiz_details = function (req, res) {
                     res.status(200).send({
                         'code': 200,
                         'voucher': results[0].voucher,
+                        'voucher_amount': results[0].voucher_amount,
                         'correct': results[0].correct,
                         'user': results[0].user_id,
                         'success': 'voucher generated sucessfully'

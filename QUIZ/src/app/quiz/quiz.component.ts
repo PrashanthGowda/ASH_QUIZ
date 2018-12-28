@@ -40,7 +40,7 @@ export class QuizComponent implements OnInit, OnDestroy {
   quizSubscription: Subscription;
 
   // timer
-  time;
+  time = 150;
   timeSubscription: Subscription;
 
 
@@ -145,9 +145,7 @@ export class QuizComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.timeSubscription) {
       this.timeSubscription.unsubscribe();
-    }
   }
 
 }

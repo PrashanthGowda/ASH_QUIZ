@@ -48,7 +48,7 @@ export class UserComponent implements OnInit {
       'user_gender': ['', Validators.required],
       'user_email': '',
       'user_mobile': ['', Validators.required],
-      'user_country': ['', Validators.required],
+      'user_country': [''],
       'user_state': ['', Validators.required]
     });
     // this.userRegistrationForm.controls['user_state'].disable();
@@ -60,6 +60,7 @@ export class UserComponent implements OnInit {
         map(country => country ? this._filterCountry(country) : this.countrys.slice())
       );
 
+      this.getStates(101);
   }
 
 
@@ -73,6 +74,8 @@ export class UserComponent implements OnInit {
   }
 
   createUser(form: FormGroup) {
+    form.value.user_country = 'India';
+  
     this.user.createUser(form.value)
       .subscribe(
         res => {
@@ -109,9 +112,9 @@ export class UserComponent implements OnInit {
     return this.countrys.filter(country => country.name.toLowerCase().indexOf(filterValue) === 0);
   }
 
-  getStates(_event: any, country) {
+  getStates(country) {
 
-    if (_event.isUserInput) {
+    // if (_event.isUserInput) {
       this.states = [];
       this.states.slice();
       // this.userRegistrationForm.patchValue({ 'user_state': '' });
@@ -126,7 +129,7 @@ export class UserComponent implements OnInit {
             );
         }
       );
-    }
+    // }
   }
 
   private _filterStates(value: string): IState[] {

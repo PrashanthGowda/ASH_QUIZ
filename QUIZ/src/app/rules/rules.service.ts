@@ -19,7 +19,7 @@ export class RulesService {
     return this.http.get<any>(this.API_URL + 'api/questions/load-questions-to-be-asked/' + participant)
     .pipe(
       map(
-        response => JSON.parse(response['data'][0]['questions_limit'])
+        response => response.data[0]
       )
     );
   }

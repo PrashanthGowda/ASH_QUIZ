@@ -54,12 +54,12 @@
                   </mat-error>
                 </mat-form-field> -->
                 <mat-form-field class="full-width">
-                  <input matInput placeholder="Country..." aria-label="Country" [matAutocomplete]="auto" formControlName="user_country" required>
-                  <mat-autocomplete #auto="matAutocomplete" >
+                  <input matInput placeholder="Country..." aria-label="Country" value="India" formControlName="user_country" readonly="true">
+                 <!--  <mat-autocomplete #auto="matAutocomplete" >
                     <mat-option *ngFor="let country of filteredCountries | async" [value]="country.name" (onSelectionChange)="getStates($event, country.id)">
                       <span>{{country.name}}</span> 
                     </mat-option>
-                  </mat-autocomplete>
+                  </mat-autocomplete> -->
                 </mat-form-field>
               </div>
               <div class="col-6">

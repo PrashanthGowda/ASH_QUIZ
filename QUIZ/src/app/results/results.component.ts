@@ -14,6 +14,7 @@ export class ResultsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   voucherCode = '';
   username = '';
+  voucherAmount = '';
   correctAnswers: any;
   constructor(
     public shared: SharedService,
@@ -29,6 +30,12 @@ export class ResultsComponent implements OnInit, OnDestroy, AfterViewInit {
     );
     this.voucherCode = this.activatedRoute.snapshot.params.voucherCode;
     this.correctAnswers = this.activatedRoute.snapshot.params.correctAnswers;
+
+    if (this.correctAnswers === '8' || this.correctAnswers === '9') {
+      this.voucherAmount = '200';
+    } else if (this.correctAnswers === '10') {
+      this.voucherAmount = '300';
+    }
   }
 
   ngOnInit() { }
