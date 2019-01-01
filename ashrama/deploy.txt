@@ -27,5 +27,13 @@ Steps:
 
 
 
+source /usr/share/nginx/html/ASH_QUIZ/Dump/ASHRAMA_QUIZ_AGE_GROUP.sql
+source /usr/share/nginx/html/ASH_QUIZ/Dump/ASHRAMA_QUIZ_CATEGORIES.sql
+source /usr/share/nginx/html/ASH_QUIZ/Dump/ASHRAMA_QUIZ_cities.sql
+source /usr/share/nginx/html/ASH_QUIZ/Dump/ASHRAMA_QUIZ_COUNTRIES.sql
+source /usr/share/nginx/html/ASH_QUIZ/Dump/ASHRAMA_QUIZ_QUESTIONS.sql
+source /usr/share/nginx/html/ASH_QUIZ/Dump/ASHRAMA_QUIZ_STATES.sql
+source /usr/share/nginx/html/ASH_QUIZ/Dump/ASHRAMA_QUIZ_USERS_QUIZ_DETAILS.sql
+source /usr/share/nginx/html/ASH_QUIZ/Dump/ASHRAMA_QUIZ_USERS.sql
 
 CHECK FOR SPACES IN QUESTIONS IMPORTANT AND CAPS LETTERS IN IMAGE

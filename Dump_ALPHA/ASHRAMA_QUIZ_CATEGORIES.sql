@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.20, for Linux (x86_64)
 --
--- Host: localhost    Database: ASHRAMA_QUIZ_ALPHA
+-- Host: localhost    Database: ASHRAMA_QUIZ
 -- ------------------------------------------------------
 -- Server version	5.7.24-0ubuntu0.18.04.1
 
@@ -16,18 +16,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `CATEGORIES`
+-- Dumping data for table `CATEGORIES`
 --
 
-DROP TABLE IF EXISTS `CATEGORIES`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `CATEGORIES` (
-  `category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `category` varchar(255) NOT NULL,
-  PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+LOCK TABLES `CATEGORIES` WRITE;
+/*!40000 ALTER TABLE `CATEGORIES` DISABLE KEYS */;
+INSERT INTO `CATEGORIES` VALUES (1,'Subject1'),(2,'Subject2'),(3,'Subject3'),(4,'Subject4'),(5,'Subject5'),(6,'Subject6'),(7,'Subject7'),(8,'Subject8'),(9,'Subject9'),(10,'Subject10');
+/*!40000 ALTER TABLE `CATEGORIES` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -38,4 +34,4 @@ CREATE TABLE `CATEGORIES` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-01 11:58:42
+-- Dump completed on 2019-01-01 12:51:16
