@@ -53,7 +53,7 @@ exports.get_user = function (req, res) {
     let user = req.body.user;
 
     if (user) {
-        mysqlConnection.query('SELECT user_name FROM ASHRAMA_QUIZ.USERS where user_id = ?', [user], function (error, results, fields) {
+        mysqlConnection.query('SELECT user_name FROM USERS where user_id = ?', [user], function (error, results, fields) {
                 if (error) {
                     res.status(500).send({
                         'code': 400,
