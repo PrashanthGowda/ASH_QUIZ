@@ -13,4 +13,21 @@ If you need any assistance connecting to your instance, please see our connectio
 
 13.233.227.25
 
+prod----
+ssh -i "rkmblr.pem" ec2-user@ec2-3-17-126-131.us-east-2.compute.amazonaws.com
+3.17.126.131
+
 sudo pm2 start server.js --name Express
+
+
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'Root@1234',
+    database: 'ASHRAMA_QUIZ',
+    timezone: 'utc'
+});
+
+module.exports = connection;
