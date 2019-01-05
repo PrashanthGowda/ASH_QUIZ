@@ -34,6 +34,7 @@
     "morgan": "^1.9.1",
     "mysql": "^2.16.0",
     "node-sass": "^4.11.0",
+    "nodemailer": "^5.0.0",
     "rxjs": "^6.3.3",
     "voucher-code-generator": "^1.1.1",
     "zone.js": "^0.8.26"

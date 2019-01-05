@@ -65,7 +65,7 @@ export class ResultsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument.body.style.background = 'url("/assets/quiz_images/design_images/water_mark.jpg")';
+    // this.elementRef.nativeElement.ownerDocument.body.style.background = 'url("/assets/quiz_images/design_images/water_mark.jpg")';
   }
 
 }

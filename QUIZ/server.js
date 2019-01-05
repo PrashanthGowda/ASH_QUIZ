@@ -12,6 +12,7 @@ const questionsRouter = require('./server/routes/questions');
 const countryRouter = require('./server/routes/country');
 const stateRouter = require('./server/routes/state');
 const sample = require('./server/routes/sample');
+const emailRouter = require('./server/routes/email');
 
 
 
@@ -31,6 +32,7 @@ app.use('/api/user', userRouter);
 app.use('/api/questions', questionsRouter);
 app.use('/api/country', countryRouter);
 app.use('/api/states', stateRouter);
+app.use('/api/email', emailRouter);
 
 
 
