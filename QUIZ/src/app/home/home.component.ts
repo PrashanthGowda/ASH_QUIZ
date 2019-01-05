@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   }
   openReadAboutComponent() {
     this.dialog.open(ReadAboutQuizComponent, {
-      width: '40rem',
+      width: '50rem',
       height: 'auto'
     });
   }

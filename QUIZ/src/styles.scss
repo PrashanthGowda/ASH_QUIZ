@@ -232,7 +232,8 @@ $breakpoint-large: 60em; // 960px
 }
 
 mat-dialog-container {
-  background-image: linear-gradient(to right bottom, #ff9800, #ffffff) !important;
+  // background-image: linear-gradient(to right bottom, #ff9800, #ffffff) !important;
+  background-image: linear-gradient(to bottom, #fcf1e0, #fcecd5, #fce8c9, #fce3be, #fcdeb3) !important;
 }
 
 .maroon {
