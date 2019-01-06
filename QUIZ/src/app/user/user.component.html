@@ -40,6 +40,7 @@
               </div>
               <div class="col-12">
                 <mat-form-field class="full-width">
+                    <span matPrefix>+91 &nbsp;</span>
                   <input matInput placeholder="phone number..." type="tel" formControlName="user_mobile" required>
                   <mat-error *ngIf="userRegistrationForm.get('user_mobile').hasError('required')">
                     phone number <strong>required</strong>

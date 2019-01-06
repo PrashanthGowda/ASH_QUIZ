@@ -4,23 +4,23 @@
     <div id="voucher_download" *ngIf="voucherCode; else noVoucher">
       <h1 style="color: #ff3300">Ramakrishna Math, Bengaluru</h1> <br>
       <!-- <h1 class="mat-h1" style="color: #0066ff">Quiz On <br /> Swami Vivekananda</h1> <br> -->
-      <h1 class="mat-h1" style="color: #0066ff">General Quiz</h1> <br>
-      <h1 class="mat-h1 yellow-font">Congratulations {{username}} <br /> You won a Gift Voucher of Rs {{voucherAmount}}</h1><br>
-      <h1 class="mat-h1" style="color:#0066ff">Voucher Code: '{{voucherCode}}'</h1><br>
+      <h1 class="mat-h1" style="color: #0066ff">General Knowledge Quiz</h1>
+      <h1 class="mat-h1 yellow-font">Congratulations {{username}}!!!<br /> You won a Gift Voucher of Rs {{voucherAmount}}</h1>
+      <h1 class="mat-h1" style="color:#0066ff">Voucher Code: '{{voucherCode}}'</h1>
 
       <!-- <h1 class="mat-h1" style="color: #9e0b0f">Please visit https://shop.advaitaashrama.org <br /> to redeem Voucher
         on purchase of any product</h1> -->
-        <h1 class="mat-h1" style="color: #9e0b0f">Please show the voucher at the allotted counter in the book stall.
-        <br>This voucher is valid for only one day i.e on Sunday 06.12.2019.  </h1>
+        <h1 class="mat-h1" style="color: #9e0b0f">Please show the gift voucher at the allotted counter in the book stall.
+        <br>This gift voucher is valid for only one day i.e on Sunday 06.12.2019.  </h1>
       <br>
     </div>
 
     <ng-template #noVoucher>
-      <h1 style="color: #ff3300">Ramakrishna Math, Bengaluru</h1> <br>
+      <h1 style="color: #ff3300">Ramakrishna Math, Bengaluru</h1>
       <!-- <h1 class="mat-h1" style="color: #0066ff">Quiz On <br /> Swami Vivekananda</h1> <br> -->
-      <h1 class="mat-h1" style="color: #0066ff">General Quiz</h1> <br>
-      <h1 class="yellow-font"> You have answered {{correctAnswers}} out of 10 Questions</h1><br>
-      <h1 class="yellow-font">Sorry {{username}} </h1><br>
+      <h1 class="mat-h1" style="color: #0066ff">General Knowledge Quiz</h1>
+      <h1 class="yellow-font"> You have answered {{correctAnswers}} out of 10 Questions</h1>
+      <h1 class="yellow-font">Sorry {{username}}!!! </h1>
       <h1 style="color: #9e0b0f;">Better Luck Next Time!!!</h1>
 
     </ng-template>

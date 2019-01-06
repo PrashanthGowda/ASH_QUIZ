@@ -19,7 +19,7 @@ exports.create_user = function (req, res) {
             let errorMessage = '';
 
             if (error.code === 'ER_DUP_ENTRY') {
-                errorMessage = 'User Already Exsist';
+                errorMessage = 'User already exists, cannot take quiz Twice';
             }
             res.status(500).send({
                 'code': 400,
