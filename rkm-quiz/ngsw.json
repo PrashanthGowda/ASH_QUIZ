@@ -9,7 +9,7 @@
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./main.f07dd37dff0ae90007a8.js",
+        "./main.07b76d98b0ba48400566.js",
         "./polyfills.d1c7bf4a2ae7c3435f95.js",
         "./runtime.ec2944dd8b20ec099bf3.js",
         "./styles.8262910f2b0cb6fbd410.css"
@@ -31,6 +31,7 @@
         "./assets/icons/icon-96x96.png",
         "./assets/quiz_images/alpha/logos/Homescreen_BG.jpg",
         "./assets/quiz_images/alpha/logos/Logo_125years.PNG",
+        "./assets/quiz_images/alpha/logos/SvintrowhiteGif.gif",
         "./assets/quiz_images/alpha/logos/lOGO_125thsv.gif",
         "./assets/quiz_images/alpha/question(300).jpg",
         "./assets/quiz_images/alpha/question(301).jpg",
@@ -70,6 +71,7 @@
     "./assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "./assets/quiz_images/alpha/logos/Homescreen_BG.jpg": "bf39c278de87314179a7a1c4a57b0785ea489a00",
     "./assets/quiz_images/alpha/logos/Logo_125years.PNG": "ca025f24cc2d396c95ca340347ef3ea7097d29e7",
+    "./assets/quiz_images/alpha/logos/SvintrowhiteGif.gif": "dd135621a9469e0ffb3aaa7a99ca301c9946e756",
     "./assets/quiz_images/alpha/logos/lOGO_125thsv.gif": "ff0138352bc102f3960afa153ef34798e0b4a58f",
     "./assets/quiz_images/alpha/question(300).jpg": "16fddcd9fe5b75ecb2c94fff667c2297fe5b32cc",
     "./assets/quiz_images/alpha/question(301).jpg": "fd9b1277bba879e328388e065c4d03087a8ed3ae",
@@ -94,8 +96,8 @@
     "./assets/quiz_images/vk.png": "04594ed35f1adffebdaf52ba05e5ce952d8503c9",
     "./assets/scss/custom-theme.scss": "76d23deb7bb618082798b15402dd4c47ed3a6deb",
     "./favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "./index.html": "9d7e4559f346b09ca2bf5393421d5b0a8ac55db8",
-    "./main.f07dd37dff0ae90007a8.js": "4bd8bcee23b25eaefb3883586b7622fe2c69ee92",
+    "./index.html": "e034be61146c807638a560c14a94b7923da43d1e",
+    "./main.07b76d98b0ba48400566.js": "a0efc4c608a9f59017df4255e90900c47d074e5f",
     "./polyfills.d1c7bf4a2ae7c3435f95.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
     "./runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "./styles.8262910f2b0cb6fbd410.css": "64157f1b895422680d3094bfda0a65a80fbd8784"

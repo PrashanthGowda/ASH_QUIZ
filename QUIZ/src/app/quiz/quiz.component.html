@@ -16,9 +16,9 @@
         <div *ngIf="jsonparse(questions[questionIndex].question_options); let data">
           <mat-radio-group class="radio-group" formControlName="option" (change)="radioChange($event)">
             <mat-radio-button color="warn" class="radio-button" value="0"> <span class="radio-label">{{data[0]}}</span></mat-radio-button>
-            <mat-radio-button color="warn" class="radio-button" value="0"> <span class="radio-label">{{data[0]}}</span></mat-radio-button>
-            <mat-radio-button color="warn" class="radio-button" value="0"> <span class="radio-label">{{data[0]}}</span></mat-radio-button>
-            <mat-radio-button color="warn" class="radio-button" value="0"> <span class="radio-label">{{data[0]}}</span></mat-radio-button>
+            <mat-radio-button color="warn" class="radio-button" value="0"> <span class="radio-label">{{data[1]}}</span></mat-radio-button>
+            <mat-radio-button color="warn" class="radio-button" value="0"> <span class="radio-label">{{data[2]}}</span></mat-radio-button>
+            <mat-radio-button color="warn" class="radio-button" value="0"> <span class="radio-label">{{data[3]}}</span></mat-radio-button>
           </mat-radio-group>
         </div>
         <br>
