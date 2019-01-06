@@ -9,7 +9,7 @@
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./main.07b76d98b0ba48400566.js",
+        "./main.85b80d0f1609c5e75f37.js",
         "./polyfills.d1c7bf4a2ae7c3435f95.js",
         "./runtime.ec2944dd8b20ec099bf3.js",
         "./styles.8262910f2b0cb6fbd410.css"
@@ -96,8 +96,8 @@
     "./assets/quiz_images/vk.png": "04594ed35f1adffebdaf52ba05e5ce952d8503c9",
     "./assets/scss/custom-theme.scss": "76d23deb7bb618082798b15402dd4c47ed3a6deb",
     "./favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "./index.html": "e034be61146c807638a560c14a94b7923da43d1e",
-    "./main.07b76d98b0ba48400566.js": "a0efc4c608a9f59017df4255e90900c47d074e5f",
+    "./index.html": "4108cece3a1db0e97a1c8307097e06c65fc89030",
+    "./main.85b80d0f1609c5e75f37.js": "a26deb0ba78392da764ff657827a09dd46a5bf81",
     "./polyfills.d1c7bf4a2ae7c3435f95.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
     "./runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "./styles.8262910f2b0cb6fbd410.css": "64157f1b895422680d3094bfda0a65a80fbd8784"
