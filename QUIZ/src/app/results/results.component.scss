@@ -21,6 +21,8 @@
   }
 
   
+
+  
   @keyframes glow {
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e0a042, 0 0 40px #e0a042, 0 0 50px #e0a042, 0 0 60px #e0a042, 0 0 70px #e0a042;
@@ -30,3 +32,115 @@
       text-shadow: 0 0 20px #fff, 0 0 30px #ff9800, 0 0 40px #ff9800, 0 0 50px #ff9800, 0 0 60px #ff9800, 0 0 70px #ff9800, 0 0 80px #ff9800;
     }
   }
+
+@media(min-width: 320px) {
+  .imageClass {
+    width: 80%;
+  }
+
+  .username {
+    font-size: 12px;
+    position: absolute;
+    left: 39%;
+    top: 57%;
+  }
+}
+
+
+@media(min-width: 360px) {
+  .imageClass {
+    width: 80%;
+  }
+
+  .username {
+    font-size: 12px;
+    position: absolute;
+    left: 42%;
+    top: 62%;
+  }
+}
+
+@media(min-width: 375px) {
+  .imageClass {
+    width: 80%;
+  }
+
+  .username {
+    font-size: 12px;
+    position: absolute;
+    left: 45%;
+    top: 64%;
+  }
+}
+
+
+@media(min-width: 412px) {
+  .imageClass {
+    width: 80%;
+  }
+
+  .username {
+    font-size: 12px;
+    position: absolute;
+    left: 45%;
+    top: 68%;
+  }
+}
+
+
+
+@media (min-width: 1280px){ 
+  .username {
+    color: #223657;
+    position: absolute;
+    left: 38rem;
+    top: 35.5rem;
+    z-index: 1000;
+  }
+}
+
+@media (min-width: 1366px){ 
+  .imageClass {
+    width: 40%;
+  }
+.username {
+  font-size: 18px;
+  color: #223657;
+  position: absolute;
+  left: 41rem;
+  top: 37.5rem;
+  z-index: 1000;
+}
+} 
+
+
+@media (min-width: 1440px){ 
+  .username {
+    color: #223657;
+    position: absolute;
+    left: 43rem;
+    top: 39.5rem;
+    z-index: 1000;
+  }
+} 
+
+
+@media (min-width: 1600px) {
+  .username{
+      color: #223657;
+      position: absolute;
+      left: 47rem;
+      top: 43.5rem;
+      z-index: 1000;
+  }
+  }
+
+
+@media (min-width: 1920px) {
+  .username{
+  color: #223657;
+    position: absolute;
+    left: 58rem;
+    top: 51.5rem;
+    z-index: 1000;
+}}

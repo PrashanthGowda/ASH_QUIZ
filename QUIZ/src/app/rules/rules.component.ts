@@ -15,6 +15,7 @@ export class RulesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0, 0);
     this.loadquestionsToBeAsked();
   }
 

@@ -46,7 +46,7 @@ export class UserComponent implements OnInit {
       'user_name': ['', Validators.required],
       'user_age': ['', Validators.required],
       'user_gender': ['', Validators.required],
-      'user_email': '',
+      'user_email': ['', Validators.required],
       'user_mobile': ['', Validators.required],
       'user_country': [''],
       'user_state': ['', Validators.required]

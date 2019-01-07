@@ -122,19 +122,22 @@ export class QuizComponent implements OnInit, OnDestroy {
     };
 
 
-    this.quizService.saveQuizDetails(quizDetails)
-      .subscribe(
-        res => {
-          if (res.voucher) {
-            this.router.navigate(['/results', res.user, res.correct, res.voucher], { skipLocationChange: true });
-          } else {
-            this.router.navigate(['/results', res.user, res.correct], { skipLocationChange: true });
+    if (this.questionsAttended.length <= 10 && this.userAnswered.length <= 10) {
+      this.quizService.saveQuizDetails(quizDetails)
+        .subscribe(
+          res => {
+            if (res.voucher) {
+              this.router.navigate(['/results', res.user, res.correct, res.voucher], { skipLocationChange: true });
+            } else {
+              this.router.navigate(['/results', res.user, res.correct], { skipLocationChange: true });
+            }
+          },
+          err => {
+            console.log('Voucher error');
           }
-        },
-        err => {
-          console.log('Voucher error');
-        }
-      );
+        );
+    }
+
   }
 
 
@@ -145,7 +148,7 @@ export class QuizComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-      this.timeSubscription.unsubscribe();
+    this.timeSubscription.unsubscribe();
   }
 
 }
