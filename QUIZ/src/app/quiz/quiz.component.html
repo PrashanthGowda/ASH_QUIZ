@@ -15,10 +15,10 @@
         <br>
         <div *ngIf="jsonparse(questions[questionIndex].question_options); let data">
           <mat-radio-group class="radio-group" formControlName="option" (change)="radioChange($event)">
-              <mat-radio-button color="warn" class="radio-button" value="0">{{data[0]}}</mat-radio-button>
-              <mat-radio-button color="warn" class="radio-button" value="1">{{data[1]}}</mat-radio-button>
-              <mat-radio-button color="warn" class="radio-button" value="2">{{data[2]}}</mat-radio-button>
-              <mat-radio-button color="warn" class="radio-button" value="3">{{data[3]}}</mat-radio-button>
+              <mat-radio-button *ngIf="data[0]" color="warn" class="radio-button" value="0">{{data[0]}}</mat-radio-button>
+              <mat-radio-button *ngIf="data[1]" color="warn" class="radio-button" value="1">{{data[1]}}</mat-radio-button>
+              <mat-radio-button *ngIf="data[2]" color="warn" class="radio-button" value="2">{{data[2]}}</mat-radio-button>
+              <mat-radio-button *ngIf="data[3]" color="warn" class="radio-button" value="3">{{data[3]}}</mat-radio-button>
           </mat-radio-group>
         </div>
         <br>

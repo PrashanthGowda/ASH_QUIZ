@@ -3,27 +3,27 @@
   <div class="center">
     <div id="voucher_download" *ngIf="voucherCode; else noVoucher" style="margin-top: -1rem">
       <h2 style="color: #ff3300">Ramakrishna Math, Bengaluru</h2>
-      <!-- <h1 class="mat-h1" style="color: #0066ff">Quiz On <br /> Swami Vivekananda</h1> <br> -->
-      <!-- <h1 class="mat-h1" style="color: #0066ff">General Knowledge Quiz</h1>
+      <h1 class="mat-h1" style="color: #0066ff">Online Quiz on Swami Vivekananda</h1>
+      <h1 class="yellow-font"> You have answered {{correctAnswers}} out of 10 Questions</h1>
       <h1 class="mat-h1 yellow-font">Congratulations {{username}}!!!<br /> You won a Gift Voucher of Rs {{voucherAmount}}</h1>
-      <h1 class="mat-h1" style="color:#0066ff">Voucher Code: '{{voucherCode}}'</h1> -->
+      <h1 class="mat-h1" style="color:#0066ff">Voucher Code: '{{voucherCode}}'</h1>
 
       <!-- <h1 class="mat-h1" style="color: #9e0b0f">Please visit https://shop.advaitaashrama.org <br /> to redeem Voucher
         on purchase of any product</h1> -->
         <!-- <h1 class="mat-h1" style="color: #9e0b0f">Please show the gift voucher at the allotted counter in the book stall.
         <br>This gift voucher is valid for only one day i.e on Sunday 06.12.2019.  </h1>
       <br> -->
-      <img class="imageClass" [src]="imagePath" alt="">
-      <h3 class="username">Raghuramananda Mahesh MJ</h3>
+      <!-- <img class="imageClass" [src]="imagePath" alt=""> -->
+      <!-- <h3 class="username">Raghuramananda Mahesh MJ</h3> -->
     </div>
 
     <ng-template #noVoucher>
       <h1 style="color: #ff3300">Ramakrishna Math, Bengaluru</h1>
       <!-- <h1 class="mat-h1" style="color: #0066ff">Quiz On <br /> Swami Vivekananda</h1> <br> -->
-      <h1 class="mat-h1" style="color: #0066ff">General Knowledge Quiz</h1>
+      <h1 class="mat-h1" style="color: #0066ff">Online Quiz on Swami Vivekananda</h1>
       <h1 class="yellow-font"> You have answered {{correctAnswers}} out of 10 Questions</h1>
       <h1 class="yellow-font">Sorry {{username}}!!! </h1>
-      <h1 style="color: #9e0b0f;">Better Luck Next Time!!!</h1>
+      <h1 style="color: #9e0b0f;">Thank you for the participation</h1>
 
     </ng-template>
   </div>
@@ -31,22 +31,24 @@
 
 <div *ngIf="voucherCode" class="row maroon center" >
   <div class="col-12">
-    <button mat-icon-button matTooltip="Download voucher code" (click)="downloadVoucher()">
-      <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">cloud_download</mat-icon>
-    </button> &nbsp;&nbsp;&nbsp;&nbsp;
-    <!-- <button mat-icon-button matTooltip="Share voucher code to your email">
-      <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">share</mat-icon>
-    </button> &nbsp;&nbsp;&nbsp;&nbsp; -->
-    <button mat-icon-button matTooltip="home" [routerLink]="['/home']">
-      <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">home</mat-icon>
+    <!-- <button mat-raised-button matTooltip="Download voucher code" (click)="downloadVoucher('winner')">
+      <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">cloud_download</mat-icon>&nbsp;&nbsp;&nbsp; Download
+    </button> -->
+    <button mat-raised-button matTooltip="Download voucher code" color="primary" (click)="downloadVoucherForWinner()">
+      <mat-icon style="font-size: 32px">cloud_download</mat-icon>&nbsp;&nbsp;&nbsp; Submit Bank Details
     </button>
   </div>
 </div>
 
 <div *ngIf="!voucherCode" class="row maroon center" style="font-size: 40px">
   <div class="col-12">
-    <button mat-icon-button matTooltip="home" [routerLink]="['/home']">
+    <!-- <button mat-icon-button matTooltip="home" [routerLink]="['/home']">
       <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">home</mat-icon>
+    </button> -->
+    <button mat-raised-button matTooltip="Download voucher code" color="primary"  (click)="downloadVoucherForLoser()">
+      <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">cloud_download</mat-icon>&nbsp;&nbsp;&nbsp; Download
     </button>
+    <br>
+    <br>
   </div>
 </div>
