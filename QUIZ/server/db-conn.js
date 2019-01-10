@@ -4,7 +4,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'ASHRAMA_QUIZ_ALPHA'
+    database: 'ASHRAMA_QUIZ_LIVE'
 });
 
 module.exports = connection;

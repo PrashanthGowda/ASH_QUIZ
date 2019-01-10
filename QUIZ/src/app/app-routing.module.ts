@@ -9,6 +9,7 @@ import { QuizGuardService } from './quiz/quiz-guard.service';
 import { UserGuardService } from './user/user-guard.service';
 import { RulesGuardService } from './rules/rules-guard.service';
 import { HomeComponent } from './home/home.component';
+import { BankDetailsComponent } from './bank-details/bank-details.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'rules', component: RulesComponent, canActivate: [UserGuardService, RulesGuardService] },
   { path: 'quiz', component: QuizComponent, canActivate: [UserGuardService, QuizGuardService] },
   { path: 'results/:user/:correctAnswers', component: ResultsComponent, canActivate: [UserGuardService]  },
-  { path: 'results/:user/:correctAnswers/:voucherCode', component: ResultsComponent, canActivate: [UserGuardService]  }
+  { path: 'results/:user/:correctAnswers/:voucherCode', component: ResultsComponent, canActivate: [UserGuardService]  },
+  { path: 'bank/:user/:voucher', component: BankDetailsComponent}
 ];
 
 @NgModule({

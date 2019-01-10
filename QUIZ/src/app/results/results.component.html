@@ -5,7 +5,7 @@
       <h2 style="color: #ff3300">Ramakrishna Math, Bengaluru</h2>
       <h1 class="mat-h1" style="color: #0066ff">Online Quiz on Swami Vivekananda</h1>
       <h1 class="yellow-font"> You have answered {{correctAnswers}} out of 10 Questions</h1>
-      <h1 class="mat-h1 yellow-font">Congratulations {{username}}!!!<br /> You won a Gift Voucher of Rs {{voucherAmount}}</h1>
+      <h1 class="mat-h1 yellow-font">Congratulations {{username}}!!!<br /> You won a Cash Voucher of Rs {{voucherAmount}}</h1>
       <h1 class="mat-h1" style="color:#0066ff">Voucher Code: '{{voucherCode}}'</h1>
 
       <!-- <h1 class="mat-h1" style="color: #9e0b0f">Please visit https://shop.advaitaashrama.org <br /> to redeem Voucher
@@ -34,7 +34,7 @@
     <!-- <button mat-raised-button matTooltip="Download voucher code" (click)="downloadVoucher('winner')">
       <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">cloud_download</mat-icon>&nbsp;&nbsp;&nbsp; Download
     </button> -->
-    <button mat-raised-button matTooltip="Download voucher code" color="primary" (click)="downloadVoucherForWinner()">
+    <button mat-raised-button matTooltip="Download voucher code" color="primary" (click)="submitbankdetails()">
       <mat-icon style="font-size: 32px">cloud_download</mat-icon>&nbsp;&nbsp;&nbsp; Submit Bank Details
     </button>
   </div>
@@ -45,8 +45,8 @@
     <!-- <button mat-icon-button matTooltip="home" [routerLink]="['/home']">
       <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">home</mat-icon>
     </button> -->
-    <button mat-raised-button matTooltip="Download voucher code" color="primary"  (click)="downloadVoucherForLoser()">
-      <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">cloud_download</mat-icon>&nbsp;&nbsp;&nbsp; Download
+    <button mat-raised-button matTooltip="Download Certificate" color="primary"  (click)="downloadVoucherForLoser()">
+      <mat-icon aria-label="Example icon-button with a heart icon" style="font-size: 32px">cloud_download</mat-icon>&nbsp;&nbsp;&nbsp; Download Certificate
     </button>
     <br>
     <br>

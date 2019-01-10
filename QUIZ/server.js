@@ -13,7 +13,7 @@ const countryRouter = require('./server/routes/country');
 const stateRouter = require('./server/routes/state');
 const sample = require('./server/routes/sample');
 const emailRouter = require('./server/routes/email');
-
+const bankRouter = require('./server/routes/bank');
 
 
 mysqlConnection.connect();
@@ -33,6 +33,7 @@ app.use('/api/questions', questionsRouter);
 app.use('/api/country', countryRouter);
 app.use('/api/states', stateRouter);
 app.use('/api/email', emailRouter);
+app.use('/api/bank', bankRouter);
 
 
 

@@ -11,7 +11,7 @@
       <div *ngIf="questions.length">
         <h3>Question {{ questionIndex + 1 }}:</h3>
         <p>{{ questions[questionIndex].question}}</p>
-        <img *ngIf="questions[questionIndex].image !== ''" class="quiz_image" src="assets/quiz_images/alpha/{{questions[questionIndex].image}}" alt="" srcset="">
+        <img *ngIf="questions[questionIndex].image" class="quiz_image" src="assets/quiz_images/alpha/{{questions[questionIndex].image}}" alt="" srcset="">
         <br>
         <div *ngIf="jsonparse(questions[questionIndex].question_options); let data">
           <mat-radio-group class="radio-group" formControlName="option" (change)="radioChange($event)">
@@ -31,3 +31,8 @@
     </mat-card>
   </div>
 </div>
+
+
+
+
+

@@ -22,3 +22,12 @@ export interface IState {
 }
 
 
+export interface IBankDetails {
+    account_number: string;
+    bank_name: string;
+    branch: string;
+    city: string;
+    ifsc: string;
+    mobile: string;
+    user_name: string;
+}

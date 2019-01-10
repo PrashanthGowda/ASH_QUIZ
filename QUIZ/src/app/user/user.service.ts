@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { IUser, ICountry, IState } from './user.model';
+import { IUser, ICountry, IState, IBankDetails } from './user.model';
 import { map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
@@ -47,5 +47,15 @@ export class UserService {
           response => response['data']
         )
       );
+  }
+
+
+  saveBankDetails (bank): Observable<IBankDetails> {
+    return this.http.post<IBankDetails> (this.API_URL + 'api/bank/add-bank-details', bank)
+    .pipe(
+      map(
+        response => response
+      )
+    );
   }
 }

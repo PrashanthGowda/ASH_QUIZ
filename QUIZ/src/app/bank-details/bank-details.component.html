@@ -1,0 +1,83 @@
+<form [formGroup]="bankDetailsForm" (ngSubmit)="submitBankDetails(bankDetailsForm)" autocomplete="off">
+  <h3 class="center maroon">Please Enter Your Bank Details</h3>
+    <div class="row">
+      <div class="col-12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Account Holder's name..." formControlName="user_name" autocomplete="off"
+            required>
+          <mat-error *ngIf="bankDetailsForm.get('user_name').hasError('required')">
+            Account Holder's name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="col-12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Bank Name..." formControlName="bank_name" autocomplete="off" required>
+          <mat-error *ngIf="bankDetailsForm.get('bank_name').hasError('required')">
+            Bank name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="col-12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Account Number..." formControlName="account_number" autocomplete="off" required>
+          <mat-error *ngIf="bankDetailsForm.get('account_number').hasError('required')">
+            Account Number is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="col-12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="City..." formControlName="city" autocomplete="off" required>
+          <mat-error *ngIf="bankDetailsForm.get('city').hasError('required')">
+            City is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="col-12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Branch..." formControlName="branch" autocomplete="off" required>
+          <mat-error *ngIf="bankDetailsForm.get('branch').hasError('required')">
+            Branch is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="col-12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="IFSC Code..." formControlName="ifsc" autocomplete="off" required>
+          <mat-error *ngIf="bankDetailsForm.get('ifsc').hasError('required')">
+            IFSC Code is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div class="col-12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Mobile Number..." formControlName="mobile" autocomplete="off" required>
+          <mat-error *ngIf="bankDetailsForm.get('mobile').hasError('required')">
+            Mobile Number is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+    </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <button mat-raised-button type=submit color='primary' style="float: right" [disabled]="bankDetailsForm.invalid">Save
+        & Download Certificate</button>
+    </div>
+    <br>
+    <br>  
+  </div>
+</form>

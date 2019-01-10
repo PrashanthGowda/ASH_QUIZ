@@ -37,7 +37,7 @@ exports.get_random_questions = function (req, res) {
 
 exports.get_load_questions_to_be_asked = function (req, res) {
     let sql = `
-     SELECT questions_limit as common  from AGE_GROUP where age_group = ?
+     SELECT questions_limit as common, questions_limit_level_1 as level_1, questions_limit_level_2 as level_2, questions_limit_level_3 as level_3  from AGE_GROUP where age_group = ?
     `
     let participant = req.params.participant;
     mysqlConnection.query(sql, participant, function (error, response) {

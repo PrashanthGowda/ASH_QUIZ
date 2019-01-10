@@ -4,6 +4,7 @@ import { SharedService } from '../shared/services/shared.service';
 import { ReadAboutQuizComponent } from '../shared/components/read-about-quiz/read-about-quiz.component';
 import { WatchVideoComponent } from '../shared/components/watch-video/watch-video.component';
 import { ContactUsComponent } from '../shared/components/contact-us/contact-us.component';
+import { AdviceComponent } from '../shared/components/advice/advice.component';
 
 @Component({
   selector: 'app-home',
@@ -41,6 +42,13 @@ export class HomeComponent implements OnInit {
     this.dialog.open(ContactUsComponent, {
       width: '39rem',
       height: '27rem'
+    });
+  }
+
+  openAdviceComponent() {
+    this.dialog.open(AdviceComponent, {
+      width: '50rem',
+      height: 'auto'
     });
   }
 

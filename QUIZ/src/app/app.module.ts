@@ -20,6 +20,8 @@ import { HomeComponent } from './home/home.component';
 import { ReadAboutQuizComponent } from './shared/components/read-about-quiz/read-about-quiz.component';
 import { ContactUsComponent } from './shared/components/contact-us/contact-us.component';
 import { WatchVideoComponent } from './shared/components/watch-video/watch-video.component';
+import { AdviceComponent } from './shared/components/advice/advice.component';
+import { BankDetailsComponent } from './bank-details/bank-details.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { WatchVideoComponent } from './shared/components/watch-video/watch-video
     FormatTimePipe,
     ReadAboutQuizComponent,
     ContactUsComponent,
-    WatchVideoComponent
+    WatchVideoComponent,
+    AdviceComponent,
+    BankDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,9 @@ import { WatchVideoComponent } from './shared/components/watch-video/watch-video
   entryComponents: [
     ReadAboutQuizComponent,
     ContactUsComponent,
-    WatchVideoComponent
+    WatchVideoComponent,
+    AdviceComponent,
+    BankDetailsComponent
   ]
 })
 export class AppModule { }

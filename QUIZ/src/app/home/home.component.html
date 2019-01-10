@@ -17,21 +17,22 @@
         Organized by Ramakrishna Math, Bengaluru
 </h1>
       <!-- <h1 class="mat-h1 home__welcome">Quiz On Swami Vivekananda</h1> -->
-      <h1 class="mat-h1 home__welcome white-font">Play Quiz and Win Cash Voucher upto Rs300/-
+      <h1 class="mat-h1 home__welcome white-font">Play Quiz and Win Cash Voucher upto Rs 300/-
         <sup>*</sup>  </h1>
     </div>
   </div>
   <br>
   <br>
   <div class="row center">
-    <div class="col-4 col-12-sm">
+    <div class="col-3 col-12-sm">
         <button mat-button [matMenuTriggerFor]="menu" class="maroon">How to Play</button>
         <mat-menu #menu="matMenu">
           <!-- <button mat-menu-item (click)="openWatchVideoComponent()"  >Watch Video</button> -->
           <button mat-menu-item (click)="openReadAboutComponent()" >Read</button>
         </mat-menu>
     </div>
-    <div class="col-4 col-12-sm"><button mat-button color="basic" [routerLink]="['/user_registration']" routerLinkActive="router-link-active" class="maroon">Play Quiz</button></div>
-    <div class="col-4 col-12-sm"><button mat-button color="basic" (click)="openContactUsComponent()" class="maroon">Contact Us</button></div>
+    <div class="col-3 col-12-sm"><button mat-button color="basic" [routerLink]="['/user_registration']" routerLinkActive="router-link-active" class="maroon">Play Quiz</button></div>
+    <div class="col-3 col-12-sm"><button mat-button color="basic" (click)="openAdviceComponent()" class="maroon">Advice To Students</button></div>
+    <div class="col-3 col-12-sm"><button mat-button color="basic" (click)="openContactUsComponent()" class="maroon">Contact Us</button></div>
   </div>
 </div>
