@@ -9,7 +9,7 @@
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./main.07f0c189583ad73dc28d.js",
+        "./main.57223216abfb980b6a3e.js",
         "./polyfills.d1c7bf4a2ae7c3435f95.js",
         "./runtime.ec2944dd8b20ec099bf3.js",
         "./styles.8262910f2b0cb6fbd410.css"
@@ -55,7 +55,7 @@
         "./assets/quiz_images/alpha/8.JPG",
         "./assets/quiz_images/alpha/9.JPG",
         "./assets/quiz_images/alpha/logos/Certificate_for _Prize_winners.jpg",
-        "./assets/quiz_images/alpha/logos/Certificate_of_Competition.jpg",
+        "./assets/quiz_images/alpha/logos/Certificate_of_Participation.jpg",
         "./assets/quiz_images/alpha/logos/Homescreen_BG.jpg",
         "./assets/quiz_images/alpha/logos/Logo_125years.PNG",
         "./assets/quiz_images/alpha/logos/SvintrowhiteGif.gif",
@@ -122,7 +122,7 @@
     "./assets/quiz_images/alpha/8.JPG": "4f784afc036e992e96822b1668895a959a72971d",
     "./assets/quiz_images/alpha/9.JPG": "bf90cf52e6d28c9a73283ac34295b3b4e8c5b885",
     "./assets/quiz_images/alpha/logos/Certificate_for _Prize_winners.jpg": "49fe14b5fdc6147e9cd49d51bd50659b3184ae80",
-    "./assets/quiz_images/alpha/logos/Certificate_of_Competition.jpg": "9d6857386665ca4bd6e2324c5a08e4b7e793a8ec",
+    "./assets/quiz_images/alpha/logos/Certificate_of_Participation.jpg": "941e389042c16f95ab5c0a0733a0b4484481f8c0",
     "./assets/quiz_images/alpha/logos/Homescreen_BG.jpg": "bf39c278de87314179a7a1c4a57b0785ea489a00",
     "./assets/quiz_images/alpha/logos/Logo_125years.PNG": "ca025f24cc2d396c95ca340347ef3ea7097d29e7",
     "./assets/quiz_images/alpha/logos/SvintrowhiteGif.gif": "dd135621a9469e0ffb3aaa7a99ca301c9946e756",
@@ -150,8 +150,8 @@
     "./assets/quiz_images/vk.png": "04594ed35f1adffebdaf52ba05e5ce952d8503c9",
     "./assets/scss/custom-theme.scss": "76d23deb7bb618082798b15402dd4c47ed3a6deb",
     "./favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "./index.html": "60d1fcab549d311b4e5d696211a382db782a49a1",
-    "./main.07f0c189583ad73dc28d.js": "da365b380d33f9ad4fd38e0c6cd02f61868be2b4",
+    "./index.html": "f4bcf655f94fbba1d6bf25f8bc315fa0e9070d38",
+    "./main.57223216abfb980b6a3e.js": "0274d878e20ae644ed26c77a87f1e1e3f44d9c20",
     "./polyfills.d1c7bf4a2ae7c3435f95.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
     "./runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "./styles.8262910f2b0cb6fbd410.css": "64157f1b895422680d3094bfda0a65a80fbd8784"
