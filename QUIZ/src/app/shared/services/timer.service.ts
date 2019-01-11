@@ -14,7 +14,7 @@ export class TimerService {
   tick = 1000;
 
   getCounter() {
-    this.counter = 3 * 60;
+    this.counter = 182;
     return timer(0, this.tick).pipe(
       startWith(this.counter),
       map(() => --this.counter)

@@ -73,7 +73,7 @@ export class BankDetailsComponent implements OnInit {
     doc.setFontSize(10);
     doc.setFont('times');
     doc.setTextColor('#ffffff');
-    doc.text(168, 45, this.voucher);
+    doc.text(165, 45, this.voucher);
     doc.setFontSize(22);
     doc.setFont('times');
     doc.setTextColor('#223657');
