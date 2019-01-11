@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `QUESTIONS`;
 CREATE TABLE `QUESTIONS` (
   `question_id` int(11) NOT NULL AUTO_INCREMENT,
   `question_options` json NOT NULL,
-  `index` int(1) NOT NULL,
+  `frequency` int(1) NOT NULL,
   `category_id` int(1) DEFAULT NULL,
   `is_active` int(1) NOT NULL,
   `question_created_at` varchar(45) NOT NULL,
@@ -60,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-11 20:41:39
+-- Dump completed on 2019-01-11 22:36:09

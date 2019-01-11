@@ -33,7 +33,7 @@ CREATE TABLE `BANK_DETAILS` (
   `mobile_number` varchar(255) NOT NULL,
   `bank_details_created_at` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `BANK_DETAILS` (
 
 LOCK TABLES `BANK_DETAILS` WRITE;
 /*!40000 ALTER TABLE `BANK_DETAILS` DISABLE KEYS */;
-INSERT INTO `BANK_DETAILS` VALUES (1,'Naame','das','wq','asda','sadasd','sdada','sdad','1547181664634'),(2,'prashanth`','2121','canara','banga','ban','122HHH','1234567','1547182740999'),(3,'pr','dsajdasj','qd','ban','asdsadb','12345jsda','45678','1547183034990'),(4,'sdasd`','dssdas','sdasda','ddsfsdf','dasdasd','dasdasd','dsada','1547183395674'),(5,'prashanth','12345466','canara','bangalre','hegg','CNBR1212','1324467','1547188139604'),(6,'dfdsfd','dsfsdfs','sdfsds','fsdfs','fsdsdf','fsdsdf','7412312123','1547203335297');
+INSERT INTO `BANK_DETAILS` VALUES (1,'Naame','das','wq','asda','sadasd','sdada','sdad','1547181664634'),(2,'prashanth`','2121','canara','banga','ban','122HHH','1234567','1547182740999'),(3,'pr','dsajdasj','qd','ban','asdsadb','12345jsda','45678','1547183034990'),(4,'sdasd`','dssdas','sdasda','ddsfsdf','dasdasd','dasdasd','dsada','1547183395674'),(5,'prashanth','12345466','canara','bangalre','hegg','CNBR1212','1324467','1547188139604'),(6,'dfdsfd','dsfsdfs','sdfsds','fsdfs','fsdsdf','fsdsdf','7412312123','1547203335297'),(7,'new bank','1234567','canara','bn','heg','GHJK','1234','1547219957168');
 /*!40000 ALTER TABLE `BANK_DETAILS` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-11 20:41:39
+-- Dump completed on 2019-01-11 22:36:10
