@@ -35,7 +35,7 @@ CREATE TABLE `USERS` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_mobile_UNIQUE` (`user_mobile`),
   UNIQUE KEY `user_id_UNIQUE` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,6 @@ CREATE TABLE `USERS` (
 
 LOCK TABLES `USERS` WRITE;
 /*!40000 ALTER TABLE `USERS` DISABLE KEYS */;
-INSERT INTO `USERS` VALUES (98,'Prashanth H J',21,'male','jprashanthgowda34@gmail.com','+447411432462','1547181991395','Karnataka','India'),(99,'Prashanth H J',21,'male','jprashanthgowda34@gmail.com','411432462','1547182506169','Karnataka','India'),(101,'Prashanth H J',21,'male','jprashanthgowda34@gmail.com','111432462','1547182665084','Karnataka','India'),(102,'priya',21,'female','jprashanthgowda34@gmail.com','07411432462','1547182957415','Karnataka','India'),(103,'Prashanth H J',21,'male','jprashanthgowda34@gmail.com','217411432462','1547183073609','Karnataka','India'),(104,'Prashanth H J',21,'male','jprashanthgowda34@gmail.com','7411432462','1547183152314','Karnataka','India');
 /*!40000 ALTER TABLE `USERS` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-11 10:43:46
+-- Dump completed on 2019-01-11 20:41:39

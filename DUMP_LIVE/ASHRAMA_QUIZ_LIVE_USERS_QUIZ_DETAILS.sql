@@ -28,7 +28,7 @@ CREATE TABLE `USERS_QUIZ_DETAILS` (
   `answers_index` json NOT NULL,
   `voucher` varchar(25) DEFAULT NULL,
   `total_time_taken` varchar(255) NOT NULL,
-  `index_total` int(11) NOT NULL,
+  `sharada` int(11) NOT NULL,
   `total_question` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `quiz_created_at` varchar(45) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE `USERS_QUIZ_DETAILS` (
   UNIQUE KEY `voucher_UNIQUE` (`voucher`),
   KEY `users_quiz_details_ibfk_1` (`user_id`),
   CONSTRAINT `users_quiz_details_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `USERS` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +47,6 @@ CREATE TABLE `USERS_QUIZ_DETAILS` (
 
 LOCK TABLES `USERS_QUIZ_DETAILS` WRITE;
 /*!40000 ALTER TABLE `USERS_QUIZ_DETAILS` DISABLE KEYS */;
-INSERT INTO `USERS_QUIZ_DETAILS` VALUES (45,'[47, 191, 283, 369, 418, 437, 477, 491, 638, 681]','[2, 0, 1, 2, 2, 1, 3, 0, 2, 0]',NULL,'151',2,10,98,'1547182025463',NULL),(46,'[1, 2, 3, 4, 5, 6, 7, 8, 346, 347]','[0, 1, 1, 1, 0, 2, 3, 1, 2, 0]','rkm-8ZKOU4rJ','141',9,10,99,'1547182608031','200'),(47,'[1, 2, 3, 4, 5, 6, 7, 8, 346, 347]','[0, 1, 1, 1, 0, 2, 3, 1, 0, 1]','rkm-WaWHpfXS','146',8,10,101,'1547182709584','200'),(48,'[1, 2, 3, 4, 5, 6, 7, 8, 346, 347]','[0, 1, 1, 1, 0, 2, 3, 1, 1, 2]','rkm-l6WH6BIw','142',8,10,102,'1547183006590','200'),(49,'[45, 88, 296, 359, 366, 460, 479, 485, 553, 660]','[0, 2, 2, 1, 1, 3, 1, 0, 3, 1]',NULL,'144',3,10,103,'1547183119935',NULL),(50,'[49, 93, 139, 146, 229, 280, 334, 521, 623]','[2, 3, 0, 3, 3, 0, 2, 2, -1]',NULL,'0',3,10,104,'1547183332377',NULL);
 /*!40000 ALTER TABLE `USERS_QUIZ_DETAILS` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-11 10:43:46
+-- Dump completed on 2019-01-11 20:41:39

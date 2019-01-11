@@ -114,7 +114,7 @@ export class QuizComponent implements OnInit, OnDestroy {
       'attended_quiz_questions': this.questionsAttended,
       'answers_index': this.userAnswered,
       'total_time_taken': this.timerService.counter,
-      'index_total': this.shared.correctAnswers,
+      'sharada': this.shared.correctAnswers,
       'total_question': this.questions.length,
       'user_id': this.shared.user_id,
       'voucher': '',
