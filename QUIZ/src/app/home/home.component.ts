@@ -41,14 +41,14 @@ export class HomeComponent implements OnInit {
   openContactUsComponent() {
     this.dialog.open(ContactUsComponent, {
       width: '39rem',
-      height: '27rem'
+      height: '39rem'
     });
   }
 
   openAdviceComponent() {
     this.dialog.open(AdviceComponent, {
       width: '50rem',
-      height: 'auto'
+      height: '25rem'
     });
   }
 

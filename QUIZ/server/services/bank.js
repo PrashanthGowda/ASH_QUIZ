@@ -14,7 +14,6 @@ exports.create_bank_details = function (req, res) {
     }
     
     mysqlConnection.query('INSERT INTO BANK_DETAILS SET ?', details, function (error, results, fields) {
-        console.log(error);
         if (error) {
             res.status(500).send({
                 'code': 400,

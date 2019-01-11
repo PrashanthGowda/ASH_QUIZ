@@ -11,11 +11,11 @@
       <div *ngIf="questions.length">
         <h3>Question {{ questionIndex + 1 }}:</h3>
         <p>{{ questions[questionIndex].question}}</p>
-        <div *ngIf="questions[questionIndex].image !== ''; else noImg">
+        <div *ngIf="questions[questionIndex].image; else noImg">
           <img class="quiz_image" src="assets/quiz_images/alpha/{{questions[questionIndex].image}}" alt="" srcset="">
         </div> 
         <ng-template noImg>
-          <div></div>
+          <div>2</div>
         </ng-template>
         <br>
         <div *ngIf="jsonparse(questions[questionIndex].question_options); let data">

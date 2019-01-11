@@ -26,7 +26,6 @@ export class BankDetailsComponent implements OnInit {
     private dialogref: MatDialogRef<BankDetailsComponent>,
     @Inject(MAT_DIALOG_DATA) private data: string,
   ) {
-    console.log(this.data);
     this.user = this.data['user'];
     this.voucher = this.data['voucher'];
   }
