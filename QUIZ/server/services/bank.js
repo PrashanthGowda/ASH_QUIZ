@@ -10,6 +10,7 @@ exports.create_bank_details = function (req, res) {
         'branch': req.body.branch,
         'ifsc': req.body.ifsc,
         'mobile_number': req.body.mobile,
+        'voucher': req.body.voucher,
         'bank_details_created_at': Date.now()
     }
     

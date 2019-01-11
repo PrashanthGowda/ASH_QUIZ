@@ -9,7 +9,7 @@
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./main.b0351b561c830f6c5f81.js",
+        "./main.b710cdec434cec0a7656.js",
         "./polyfills.d1c7bf4a2ae7c3435f95.js",
         "./runtime.ec2944dd8b20ec099bf3.js",
         "./styles.8262910f2b0cb6fbd410.css"
@@ -96,7 +96,7 @@
     "./assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "./assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "./assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "./assets/quiz_images/alpha/1.JPG": "9e16337797c39feb44acdced16c7999e0bb311b3",
+    "./assets/quiz_images/alpha/1.JPG": "d1d09c4580bc2b07b7a792c400a684c8edeb2fb5",
     "./assets/quiz_images/alpha/10.jpg": "c646030db8f33a1bb890413652f9abdfb1973832",
     "./assets/quiz_images/alpha/11.jpg": "463ea3e514f3ea0f81704ec96b7ae17f7858763d",
     "./assets/quiz_images/alpha/12.jpg": "6b0aa095612ac28fdc1fe95495f3ebeda1fef4ba",
@@ -109,7 +109,7 @@
     "./assets/quiz_images/alpha/19.JPG": "6a6d1b0ec34365f9aa5c3ba9a83eb08fa607b92d",
     "./assets/quiz_images/alpha/2.JPG": "b78aedb41d3731127fb145252f8349db3bb57840",
     "./assets/quiz_images/alpha/20.JPG": "4b2aa1eca96b216fc213c89f9f79cb486f496c79",
-    "./assets/quiz_images/alpha/21.JPG": "aa05bf04f1eaa3d9fec92b9ee27fbb606610082c",
+    "./assets/quiz_images/alpha/21.JPG": "f23fc75d74ef2614f3fbaf6075e842253f93f9e6",
     "./assets/quiz_images/alpha/22.JPG": "24c01e49cd1b479b3f622bf72b2cbb81e785e992",
     "./assets/quiz_images/alpha/23.JPG": "a5ed689269a912df62a4f696bcaa577957243956",
     "./assets/quiz_images/alpha/24.JPG": "60002be5b963675b947b35503dc4881912ae36a8",
@@ -150,8 +150,8 @@
     "./assets/quiz_images/vk.png": "04594ed35f1adffebdaf52ba05e5ce952d8503c9",
     "./assets/scss/custom-theme.scss": "76d23deb7bb618082798b15402dd4c47ed3a6deb",
     "./favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "./index.html": "22f6648f48d5737c2b565c4bccf96efce2632a93",
-    "./main.b0351b561c830f6c5f81.js": "cf3d81be77dd2e5d054d38feecec5badc948adc7",
+    "./index.html": "9af3595cadb13c979d630cb201af4d9e40a7e6ff",
+    "./main.b710cdec434cec0a7656.js": "a0176c0ad7dafda592841a836c8f5815e851bf2a",
     "./polyfills.d1c7bf4a2ae7c3435f95.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
     "./runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "./styles.8262910f2b0cb6fbd410.css": "64157f1b895422680d3094bfda0a65a80fbd8784"

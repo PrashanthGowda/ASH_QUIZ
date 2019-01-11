@@ -35,7 +35,7 @@ CREATE TABLE `USERS` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `user_mobile_UNIQUE` (`user_mobile`),
   UNIQUE KEY `user_id_UNIQUE` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,6 @@ CREATE TABLE `USERS` (
 
 LOCK TABLES `USERS` WRITE;
 /*!40000 ALTER TABLE `USERS` DISABLE KEYS */;
-INSERT INTO `USERS` VALUES (114,'Prashanth H J',21,'male','jprashanthgowda34@gmail.com','7411432462','1547219729447','Karnataka','India'),(115,'Prashanth 2',21,'male','jprashanthgowda34@gmail.com','7411132462','1547219837685','Karnataka','India'),(117,'Prashanth H J',21,'male','jprashanthgowda34@gmail.com','7411432463','1547226067201','Karnataka','India'),(118,'Prashanth H J',12,'male','jprashanthgowda34@gmail.com','74112462','1547226222818','Karnataka','India');
 /*!40000 ALTER TABLE `USERS` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-11 22:36:09
+-- Dump completed on 2019-01-11 23:32:57

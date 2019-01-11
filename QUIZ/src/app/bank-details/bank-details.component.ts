@@ -43,6 +43,7 @@ export class BankDetailsComponent implements OnInit {
   }
 
   submitBankDetails(bankDetailsForm) {
+    bankDetailsForm.value['voucher'] = this.voucher;
     this.userService.saveBankDetails(bankDetailsForm.value).subscribe(
       res => {
         if (res['code'] === 200) {
