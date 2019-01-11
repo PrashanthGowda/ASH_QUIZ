@@ -33,7 +33,7 @@ CREATE TABLE `BANK_DETAILS` (
   `mobile_number` varchar(255) NOT NULL,
   `bank_details_created_at` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ CREATE TABLE `BANK_DETAILS` (
 
 LOCK TABLES `BANK_DETAILS` WRITE;
 /*!40000 ALTER TABLE `BANK_DETAILS` DISABLE KEYS */;
+INSERT INTO `BANK_DETAILS` VALUES (1,'Naame','das','wq','asda','sadasd','sdada','sdad','1547181664634'),(2,'prashanth`','2121','canara','banga','ban','122HHH','1234567','1547182740999'),(3,'pr','dsajdasj','qd','ban','asdsadb','12345jsda','45678','1547183034990'),(4,'sdasd`','dssdas','sdasda','ddsfsdf','dasdasd','dasdasd','dsada','1547183395674');
 /*!40000 ALTER TABLE `BANK_DETAILS` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-11  1:00:36
+-- Dump completed on 2019-01-11 10:43:46

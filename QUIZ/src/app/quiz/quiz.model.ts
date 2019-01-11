@@ -5,7 +5,7 @@ export interface IQuiz {
 export interface IQuestions {
     question_id: number;
     question_options: any;
-    correct_answer_index: number;
+    index: number;
     category_id: number;
     is_active: number;
     question_created_at: Date;

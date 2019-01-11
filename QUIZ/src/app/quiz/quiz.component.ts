@@ -93,7 +93,7 @@ export class QuizComponent implements OnInit, OnDestroy {
     this.questionsAttended.splice(this.questionIndex, 0, question.question_id);
     this.userAnswered.splice(this.questionIndex, 0, form.value.option !== null ? +form.value.option : -1);
 
-    if (+form.value.option === question.correct_answer_index) {
+    if (+form.value.option === question.index) {
 
       this.shared.correctAnswers += 1;
     }
@@ -106,7 +106,7 @@ export class QuizComponent implements OnInit, OnDestroy {
 
     this.questionsAttended.splice(this.questionIndex, 0, question.question_id);
     this.userAnswered.splice(this.questionIndex, 0, form.value.option !== null ? +form.value.option : -1);
-    if (+form.value.option === question.correct_answer_index) {
+    if (+form.value.option === question.index) {
       this.shared.correctAnswers += 1;
     }
 
@@ -114,7 +114,7 @@ export class QuizComponent implements OnInit, OnDestroy {
       'attended_quiz_questions': this.questionsAttended,
       'answers_index': this.userAnswered,
       'total_time_taken': this.timerService.counter,
-      'total_correct_answers': this.shared.correctAnswers,
+      'index_total': this.shared.correctAnswers,
       'total_question': this.questions.length,
       'user_id': this.shared.user_id,
       'voucher': '',

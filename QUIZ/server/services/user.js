@@ -77,14 +77,14 @@ exports.user_quiz_details = function (req, res) {
 
     let user = req.body.user_id;
 
-    if (req.body.total_correct_answers === 8 || req.body.total_correct_answers === 9) {
+    if (req.body.index_total === 8 || req.body.index_total === 9) {
         req.body.voucher = voucher_codes.generate({
             prefix: "rkm-",
             length: 8,
             count: 1
         });
         req.body.voucher_amount = 200;
-    } else if (req.body.total_correct_answers === 10) {
+    } else if (req.body.index_total === 10) {
         req.body.voucher = voucher_codes.generate({
             prefix: "viveka-",
             length: 8,
@@ -99,7 +99,7 @@ exports.user_quiz_details = function (req, res) {
             'answers_index': JSON.stringify(req.body.answers_index),
             'voucher': req.body.voucher[0],
             'total_time_taken': req.body.total_time_taken,
-            'total_correct_answers': req.body.total_correct_answers,
+            'index_total': req.body.index_total,
             'total_question': req.body.total_question,
             'user_id': user,
             'quiz_created_at': Date.now(),
@@ -113,7 +113,7 @@ exports.user_quiz_details = function (req, res) {
                     'failed': 'error ocurred'
                 })
             } else {
-                mysqlConnection.query('SELECT user_id, voucher, total_correct_answers as correct from USERS_QUIZ_DETAILS where user_quiz_id = ?', [results.insertId], function (error, results, fields) {
+                mysqlConnection.query('SELECT user_id, voucher, index_total as correct from USERS_QUIZ_DETAILS where user_quiz_id = ?', [results.insertId], function (error, results, fields) {
                     res.status(200).send({
                         'code': 200,
                         'voucher': results[0].voucher,

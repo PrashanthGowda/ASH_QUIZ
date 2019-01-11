@@ -32,7 +32,7 @@
                   Gender<sup>*</sup>: &nbsp;&nbsp;&nbsp;&nbsp;
                   <mat-radio-button color="warn" value="male">Male</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
                   <mat-radio-button color="warn" value="female">Female</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  <mat-radio-button color="warn" value="others">Others</mat-radio-button>
+                  <!-- <mat-radio-button color="warn" value="others">Others</mat-radio-button> -->
                   <mat-error *ngIf="userRegistrationForm.get('user_gender').hasError('required') && (userRegistrationForm.get('user_gender').dirty || userRegistrationForm.get('user_gender').touched)">
                     Gender is <strong>required</strong>
                   </mat-error>
