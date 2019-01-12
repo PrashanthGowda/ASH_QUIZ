@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API_URL: 'http://3.17.126.131:3000/'
+  API_URL: 'http://quiz.rkmathbangalore.org:3000/'
 };
